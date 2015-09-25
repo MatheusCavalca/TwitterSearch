@@ -15,7 +15,6 @@
 		385AA2801BB31A490053260E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 385AA27F1BB31A490053260E /* AppDelegate.m */; };
 		385AA2831BB31A490053260E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385AA2821BB31A490053260E /* ViewController.m */; };
 		385AA2861BB31A490053260E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385AA2841BB31A490053260E /* Main.storyboard */; };
-		385AA2891BB31A490053260E /* BuscadorTwitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 385AA2871BB31A490053260E /* BuscadorTwitter.xcdatamodeld */; };
 		385AA28B1BB31A490053260E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385AA28A1BB31A490053260E /* Assets.xcassets */; };
 		385AA28E1BB31A490053260E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385AA28C1BB31A490053260E /* LaunchScreen.storyboard */; };
 		385AA2991BB31A490053260E /* BuscadorTwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 385AA2981BB31A490053260E /* BuscadorTwitterTests.m */; };
@@ -60,7 +59,6 @@
 		385AA2811BB31A490053260E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		385AA2821BB31A490053260E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		385AA2851BB31A490053260E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		385AA2881BB31A490053260E /* BuscadorTwitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BuscadorTwitter.xcdatamodel; sourceTree = "<group>"; };
 		385AA28A1BB31A490053260E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385AA28D1BB31A490053260E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385AA28F1BB31A490053260E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				385AA28A1BB31A490053260E /* Assets.xcassets */,
 				385AA28C1BB31A490053260E /* LaunchScreen.storyboard */,
 				385AA28F1BB31A490053260E /* Info.plist */,
-				385AA2871BB31A490053260E /* BuscadorTwitter.xcdatamodeld */,
 				385AA27B1BB31A490053260E /* Supporting Files */,
 			);
 			path = BuscadorTwitter;
@@ -411,7 +408,6 @@
 				385AA2801BB31A490053260E /* AppDelegate.m in Sources */,
 				38686BB31BB4976A003EB723 /* RecentSearches.m in Sources */,
 				38686BB71BB49873003EB723 /* SearchesAndTrendsTableViewCell.m in Sources */,
-				385AA2891BB31A490053260E /* BuscadorTwitter.xcdatamodeld in Sources */,
 				3800209B1BB4499C001509C4 /* Tweet.m in Sources */,
 				380020981BB44032001509C4 /* ResultsViewController.m in Sources */,
 				380020931BB43FBC001509C4 /* TweetTableViewCell.m in Sources */,
@@ -678,19 +674,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		385AA2871BB31A490053260E /* BuscadorTwitter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				385AA2881BB31A490053260E /* BuscadorTwitter.xcdatamodel */,
-			);
-			currentVersion = 385AA2881BB31A490053260E /* BuscadorTwitter.xcdatamodel */;
-			path = BuscadorTwitter.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 385AA2701BB31A490053260E /* Project object */;
 }
