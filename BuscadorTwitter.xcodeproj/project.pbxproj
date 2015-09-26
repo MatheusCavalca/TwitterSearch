@@ -23,6 +23,9 @@
 		38686BB71BB49873003EB723 /* SearchesAndTrendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38686BB51BB49873003EB723 /* SearchesAndTrendsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		38686BB81BB49873003EB723 /* SearchesAndTrendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38686BB61BB49873003EB723 /* SearchesAndTrendsTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		387C30731BB353E300044EE1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387C30721BB353E300044EE1 /* Social.framework */; };
+		38C440AA1BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C440A91BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		38C440AD1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C440AC1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		38CB6B141BB6E397008800FB /* ActivityIndicatorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CB6B131BB6E397008800FB /* ActivityIndicatorButton.m */; settings = {ASSET_TAGS = (); }; };
 		4F65B093D5344FB21E4EE08F /* libPods-BuscadorTwitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A87E43698BD2DE5CF1D7C3 /* libPods-BuscadorTwitter.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +77,11 @@
 		38686BB51BB49873003EB723 /* SearchesAndTrendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchesAndTrendsTableViewCell.m; sourceTree = "<group>"; };
 		38686BB61BB49873003EB723 /* SearchesAndTrendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchesAndTrendsTableViewCell.xib; sourceTree = "<group>"; };
 		387C30721BB353E300044EE1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		38C440A91BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchesAndTrendsHeaderView.xib; sourceTree = "<group>"; };
+		38C440AB1BB5B0400044C85B /* SearchesAndTrendsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchesAndTrendsHeaderView.h; sourceTree = "<group>"; };
+		38C440AC1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchesAndTrendsHeaderView.m; sourceTree = "<group>"; };
+		38CB6B121BB6E397008800FB /* ActivityIndicatorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorButton.h; sourceTree = "<group>"; };
+		38CB6B131BB6E397008800FB /* ActivityIndicatorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorButton.m; sourceTree = "<group>"; };
 		A07E244797C80EDD674BE359 /* Pods-BuscadorTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuscadorTwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuscadorTwitter/Pods-BuscadorTwitter.debug.xcconfig"; sourceTree = "<group>"; };
 		C6A443A7750BCF79DE18958D /* Pods-BuscadorTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuscadorTwitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuscadorTwitter/Pods-BuscadorTwitter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +182,8 @@
 		385AA27A1BB31A490053260E /* BuscadorTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				38CB6B111BB6E36D008800FB /* Custom Components */,
+				38C440A81BB5AF3C0044C85B /* UIView */,
 				3800209C1BB449A3001509C4 /* NSObjects */,
 				380020951BB43FF8001509C4 /* UIViewControllers */,
 				380020941BB43FC2001509C4 /* UITableViewCells */,
@@ -212,6 +222,25 @@
 				385AA2A51BB31A490053260E /* Info.plist */,
 			);
 			path = BuscadorTwitterUITests;
+			sourceTree = "<group>";
+		};
+		38C440A81BB5AF3C0044C85B /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				38C440AB1BB5B0400044C85B /* SearchesAndTrendsHeaderView.h */,
+				38C440AC1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m */,
+				38C440A91BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		38CB6B111BB6E36D008800FB /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				38CB6B121BB6E397008800FB /* ActivityIndicatorButton.h */,
+				38CB6B131BB6E397008800FB /* ActivityIndicatorButton.m */,
+			);
+			name = "Custom Components";
 			sourceTree = "<group>";
 		};
 		7A4ECAF90739A6E9642F4838 /* Frameworks */ = {
@@ -330,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C440AA1BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib in Resources */,
 				385AA28E1BB31A490053260E /* LaunchScreen.storyboard in Resources */,
 				385AA28B1BB31A490053260E /* Assets.xcassets in Resources */,
 				385AA2861BB31A490053260E /* Main.storyboard in Resources */,
@@ -406,6 +436,8 @@
 			files = (
 				385AA2831BB31A490053260E /* ViewController.m in Sources */,
 				385AA2801BB31A490053260E /* AppDelegate.m in Sources */,
+				38CB6B141BB6E397008800FB /* ActivityIndicatorButton.m in Sources */,
+				38C440AD1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m in Sources */,
 				38686BB31BB4976A003EB723 /* RecentSearches.m in Sources */,
 				38686BB71BB49873003EB723 /* SearchesAndTrendsTableViewCell.m in Sources */,
 				3800209B1BB4499C001509C4 /* Tweet.m in Sources */,

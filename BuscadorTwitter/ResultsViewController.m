@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(tappedSearchIcon:)];
+    [tapGesture setDelegate:self];
+    [self.searchView addGestureRecognizer:tapGesture];
+    self.lblQuerySearched.text = self.querySearched;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +43,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.arrayTweets.count;
+}
+
+- (void)tappedSearchIcon:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

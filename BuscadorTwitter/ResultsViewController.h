@@ -10,10 +10,11 @@
 #import "TweetTableViewCell.h"
 #import "Tweet.h"
 
-@interface ResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
+@property (strong, nonatomic) IBOutlet UIView *searchView;
 @property (strong, nonatomic) IBOutlet UITableView *tvMain;
-
 @property (strong, nonatomic) NSMutableArray *arrayTweets;
-
+@property (strong, nonatomic) IBOutlet UILabel *lblQuerySearched;
+@property (strong, nonatomic) NSString *querySearched;
 @end
