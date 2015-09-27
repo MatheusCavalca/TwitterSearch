@@ -27,6 +27,7 @@
 		38C440AA1BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C440A91BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
 		38C440AD1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C440AC1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		38CB6B141BB6E397008800FB /* ActivityIndicatorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CB6B131BB6E397008800FB /* ActivityIndicatorButton.m */; settings = {ASSET_TAGS = (); }; };
+		38DFEE0E1BB8A84D0059AE65 /* TweetWithMediaUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DFEE0D1BB8A84D0059AE65 /* TweetWithMediaUITableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		4F65B093D5344FB21E4EE08F /* libPods-BuscadorTwitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A87E43698BD2DE5CF1D7C3 /* libPods-BuscadorTwitter.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,8 @@
 		38C440AC1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchesAndTrendsHeaderView.m; sourceTree = "<group>"; };
 		38CB6B121BB6E397008800FB /* ActivityIndicatorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorButton.h; sourceTree = "<group>"; };
 		38CB6B131BB6E397008800FB /* ActivityIndicatorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorButton.m; sourceTree = "<group>"; };
+		38DFEE0C1BB8A84D0059AE65 /* TweetWithMediaUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetWithMediaUITableViewCell.h; sourceTree = "<group>"; };
+		38DFEE0D1BB8A84D0059AE65 /* TweetWithMediaUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetWithMediaUITableViewCell.m; sourceTree = "<group>"; };
 		A07E244797C80EDD674BE359 /* Pods-BuscadorTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuscadorTwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuscadorTwitter/Pods-BuscadorTwitter.debug.xcconfig"; sourceTree = "<group>"; };
 		C6A443A7750BCF79DE18958D /* Pods-BuscadorTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuscadorTwitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuscadorTwitter/Pods-BuscadorTwitter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +136,8 @@
 			children = (
 				380020911BB43FBC001509C4 /* TweetTableViewCell.h */,
 				380020921BB43FBC001509C4 /* TweetTableViewCell.m */,
+				38DFEE0C1BB8A84D0059AE65 /* TweetWithMediaUITableViewCell.h */,
+				38DFEE0D1BB8A84D0059AE65 /* TweetWithMediaUITableViewCell.m */,
 				38686BB41BB49873003EB723 /* SearchesAndTrendsTableViewCell.h */,
 				38686BB51BB49873003EB723 /* SearchesAndTrendsTableViewCell.m */,
 				38686BB61BB49873003EB723 /* SearchesAndTrendsTableViewCell.xib */,
@@ -444,6 +449,7 @@
 			files = (
 				385AA2831BB31A490053260E /* ViewController.m in Sources */,
 				385AA2801BB31A490053260E /* AppDelegate.m in Sources */,
+				38DFEE0E1BB8A84D0059AE65 /* TweetWithMediaUITableViewCell.m in Sources */,
 				38CB6B141BB6E397008800FB /* ActivityIndicatorButton.m in Sources */,
 				38C440AD1BB5B0400044C85B /* SearchesAndTrendsHeaderView.m in Sources */,
 				38686BB31BB4976A003EB723 /* RecentSearches.m in Sources */,

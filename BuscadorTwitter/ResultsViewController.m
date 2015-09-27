@@ -85,20 +85,38 @@
 
 #pragma mark - UITableView DataSource/Delegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellIdentifier"];
-    
-    cell.lblName.text = ((Tweet*)[self.arrayTweets objectAtIndex:indexPath.row]).profileName;
-    cell.lblMessage.text = ((Tweet*)[self.arrayTweets objectAtIndex:indexPath.row]).text;
-    if(((Tweet*)[self.arrayTweets objectAtIndex:indexPath.row]).profilePicture){
-        cell.imgProfilePicture.image = ((Tweet*)[self.arrayTweets objectAtIndex:indexPath.row]).profilePicture;
+    Tweet *currentTweet = (Tweet*)[self.arrayTweets objectAtIndex:indexPath.row];
+    if(currentTweet.mediaPicture){
+        TweetWithMediaUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetWithMediaCellIdentifier"];
+        cell.lblName.text = currentTweet.profileName;
+        cell.lblMessage.text = currentTweet.text;
+        cell.imgMediaPicture.image = currentTweet.mediaPicture;
+        if(currentTweet.profilePicture){
+            cell.imgProfilePicture.image = currentTweet.profilePicture;
+        }
+        cell.imgProfilePicture.layer.cornerRadius = cell.imgProfilePicture.frame.size.height/2;
+        cell.imgProfilePicture.clipsToBounds = YES;
+        cell.tag = indexPath.row;
+        cell.delegate = self;
+        
+        [cell hideOption:NO];
+        return cell;
     }
-    cell.imgProfilePicture.layer.cornerRadius = cell.imgProfilePicture.frame.size.height/2;
-    cell.imgProfilePicture.clipsToBounds = YES;
-    cell.tag = indexPath.row;
-    cell.delegate = self;
-    
-    [cell hideOption:NO];
-    return cell;
+    else{
+        TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellIdentifier"];
+        cell.lblName.text = currentTweet.profileName;
+        cell.lblMessage.text = currentTweet.text;
+        if(currentTweet.profilePicture){
+            cell.imgProfilePicture.image = currentTweet.profilePicture;
+        }
+        cell.imgProfilePicture.layer.cornerRadius = cell.imgProfilePicture.frame.size.height/2;
+        cell.imgProfilePicture.clipsToBounds = YES;
+        cell.tag = indexPath.row;
+        cell.delegate = self;
+        
+        [cell hideOption:NO];
+        return cell;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

@@ -10,7 +10,7 @@
 
 @implementation Tweet
 
--(id)initWithProfileName:(NSString*)name text:(NSString*)text tweetID:(NSString*)tweetID andProfilePictureUrl: (NSString*)profilePictureURL
+-(id)initWithProfileName:(NSString*)name text:(NSString*)text tweetID:(NSString*)tweetID profilePictureURL: (NSString*)profilePictureURL andMediaPictureURL:(NSString*)mediaPictureURL
 {
     self = [super init];
     
@@ -20,6 +20,7 @@
         self.text = text;
         self.pictureURL = profilePictureURL;
         self.tweetID = tweetID;
+        self.mediaURL = mediaPictureURL;
     }
     return self;
 }

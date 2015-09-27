@@ -10,6 +10,7 @@
 #import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
 #import "TweetTableViewCell.h"
+#import "TweetWithMediaUITableViewCell.h"
 #import "Tweet.h"
 
 @interface ResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, TweetTableViewCellDelegate, UIScrollViewDelegate>

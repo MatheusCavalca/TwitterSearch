@@ -177,7 +177,7 @@
                                        error:&jsonError];
                  [self parseSearchTweetResponseWithData:json];
                  if(arrayTweets.count > 0){
-                     [self requestProfilePicture:^(BOOL successOperation) {
+                     [self requestProfilePictureAndMedia:^(BOOL successOperation) {
                          [RecentSearches storeRecentSearch: self.txtQuery.text];
                          [self.view setUserInteractionEnabled:YES];
                          [self.btSearch hideActivityIndicator];
@@ -207,12 +207,26 @@
 - (void)parseSearchTweetResponseWithData:(NSDictionary*)jsonResponse{
     //clear array before add current objects
     [arrayTweets removeAllObjects];
-    
     NSArray *statuses = jsonResponse[@"statuses"];
     for(NSDictionary *dic in statuses){
         NSDictionary *dicUser = dic[@"user"];
-        Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] andProfilePictureUrl:dicUser[@"profile_image_url_https"]];
-        [arrayTweets addObject:newTweet];
+        NSDictionary *dicEntity = dic[@"entities"];
+        if(dicEntity[@"media"]){
+            NSArray *arrayMedia = dicEntity[@"media"];
+            NSDictionary *firstEntity = arrayMedia[0];
+            if(firstEntity[@"media_url_https"]){
+                Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] profilePictureURL:dicUser[@"profile_image_url_https"] andMediaPictureURL:firstEntity[@"media_url_https"]];
+                [arrayTweets addObject:newTweet];
+            }
+            else{
+                Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] profilePictureURL:dicUser[@"profile_image_url_https"] andMediaPictureURL:nil];
+                [arrayTweets addObject:newTweet];
+            }
+        }
+        else{
+            Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] profilePictureURL:dicUser[@"profile_image_url_https"] andMediaPictureURL:nil];
+            [arrayTweets addObject:newTweet];
+        }
     }
 }
 
@@ -267,9 +281,10 @@
 }
 
 
-- (void)requestProfilePicture:(void(^)(BOOL successOperation))completion{
+- (void)requestProfilePictureAndMedia:(void(^)(BOOL successOperation))completion{
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     for(Tweet *tweet in arrayTweets){
+        //profile picture
         NSString *strHighQualityPicture = [tweet.pictureURL stringByReplacingOccurrencesOfString: @"_normal" withString: @""];
         NSURL *pictureURL = [NSURL URLWithString:strHighQualityPicture];
         NSURLSession *session = [NSURLSession sharedSession];
@@ -282,8 +297,26 @@
                 dispatch_semaphore_signal(semaphore);
             }
         }] resume];
+        
+        //media picture
+        NSURL *mediaURL = [NSURL URLWithString:tweet.mediaURL];
+        if(mediaURL){
+            NSURLSession *sessionMedia = [NSURLSession sharedSession];
+            [[sessionMedia dataTaskWithURL:mediaURL completionHandler:^(NSData *data, NSURLResponse *response,NSError *error) {
+                if (!error) {
+                    tweet.mediaPicture = [UIImage imageWithData:data];
+                    dispatch_semaphore_signal(semaphore);
+                }
+                else{
+                    dispatch_semaphore_signal(semaphore);
+                }
+            }] resume];
+        }
+        else{
+            dispatch_semaphore_signal(semaphore);
+        }
     }
-    for(int i=0; i<arrayTweets.count; i++){
+    for(int i=0; i<arrayTweets.count*2; i++){
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     }
     completion(true);
