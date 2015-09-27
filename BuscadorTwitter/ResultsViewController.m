@@ -8,10 +8,6 @@
 
 #import "ResultsViewController.h"
 
-@interface ResultsViewController ()
-
-@end
-
 @implementation ResultsViewController
 
 - (void)viewDidLoad {
@@ -86,37 +82,25 @@
 #pragma mark - UITableView DataSource/Delegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     Tweet *currentTweet = (Tweet*)[self.arrayTweets objectAtIndex:indexPath.row];
+    TweetTableViewCell *cell;
     if(currentTweet.mediaPicture){
-        TweetWithMediaUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetWithMediaCellIdentifier"];
-        cell.lblName.text = currentTweet.profileName;
-        cell.lblMessage.text = currentTweet.text;
-        cell.imgMediaPicture.image = currentTweet.mediaPicture;
-        if(currentTweet.profilePicture){
-            cell.imgProfilePicture.image = currentTweet.profilePicture;
-        }
-        cell.imgProfilePicture.layer.cornerRadius = cell.imgProfilePicture.frame.size.height/2;
-        cell.imgProfilePicture.clipsToBounds = YES;
-        cell.tag = indexPath.row;
-        cell.delegate = self;
-        
-        [cell hideOption:NO];
-        return cell;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"TweetWithMediaCellIdentifier"];
+        ((TweetWithMediaUITableViewCell*)cell).imgMediaPicture.image = currentTweet.mediaPicture;
     }
     else{
-        TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellIdentifier"];
-        cell.lblName.text = currentTweet.profileName;
-        cell.lblMessage.text = currentTweet.text;
-        if(currentTweet.profilePicture){
-            cell.imgProfilePicture.image = currentTweet.profilePicture;
-        }
-        cell.imgProfilePicture.layer.cornerRadius = cell.imgProfilePicture.frame.size.height/2;
-        cell.imgProfilePicture.clipsToBounds = YES;
-        cell.tag = indexPath.row;
-        cell.delegate = self;
-        
-        [cell hideOption:NO];
-        return cell;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellIdentifier"];
     }
+    cell.lblName.text = currentTweet.profileName;
+    cell.lblMessage.text = currentTweet.text;
+    if(currentTweet.profilePicture){
+        cell.imgProfilePicture.image = currentTweet.profilePicture;
+    }
+    cell.imgProfilePicture.layer.cornerRadius = cell.imgProfilePicture.frame.size.height/2;
+    cell.imgProfilePicture.clipsToBounds = YES;
+    cell.tag = indexPath.row;
+    cell.delegate = self;
+    [cell hideOption:NO];
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

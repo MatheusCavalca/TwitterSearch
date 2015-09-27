@@ -9,9 +9,6 @@
 #import "ViewController.h"
 
 #define MAIN_ROW_HEIGHT 40
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
 {
@@ -177,7 +174,7 @@
                                        error:&jsonError];
                  [self parseSearchTweetResponseWithData:json];
                  if(arrayTweets.count > 0){
-                     [self requestProfilePictureAndMedia:^(BOOL successOperation) {
+                     [self requestProfileAndMediaPictures:^(BOOL successOperation) {
                          [RecentSearches storeRecentSearch: self.txtQuery.text];
                          [self.view setUserInteractionEnabled:YES];
                          [self.btSearch hideActivityIndicator];
@@ -211,22 +208,10 @@
     for(NSDictionary *dic in statuses){
         NSDictionary *dicUser = dic[@"user"];
         NSDictionary *dicEntity = dic[@"entities"];
-        if(dicEntity[@"media"]){
-            NSArray *arrayMedia = dicEntity[@"media"];
-            NSDictionary *firstEntity = arrayMedia[0];
-            if(firstEntity[@"media_url_https"]){
-                Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] profilePictureURL:dicUser[@"profile_image_url_https"] andMediaPictureURL:firstEntity[@"media_url_https"]];
-                [arrayTweets addObject:newTweet];
-            }
-            else{
-                Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] profilePictureURL:dicUser[@"profile_image_url_https"] andMediaPictureURL:nil];
-                [arrayTweets addObject:newTweet];
-            }
-        }
-        else{
-            Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] profilePictureURL:dicUser[@"profile_image_url_https"] andMediaPictureURL:nil];
-            [arrayTweets addObject:newTweet];
-        }
+        NSArray *arrayMedia = dicEntity[@"media"];
+        NSDictionary *firstEntity = arrayMedia[0];
+        Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] profilePictureURL:dicUser[@"profile_image_url_https"] andMediaPictureURL:firstEntity[@"media_url_https"]];
+        [arrayTweets addObject:newTweet];
     }
 }
 
@@ -269,7 +254,6 @@
 - (void)parseTrendsWithData:(NSDictionary*)jsonResponse{
     //clear array before add current objects
     [arrayTrends removeAllObjects];
-    
     NSDictionary *arrayJson = [((NSArray*)jsonResponse) objectAtIndex:0];
     NSArray *trends = arrayJson[@"trends"];
     for(int i=0; i<5; i++){
@@ -281,7 +265,7 @@
 }
 
 
-- (void)requestProfilePictureAndMedia:(void(^)(BOOL successOperation))completion{
+- (void)requestProfileAndMediaPictures:(void(^)(BOOL successOperation))completion{
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     for(Tweet *tweet in arrayTweets){
         //profile picture
