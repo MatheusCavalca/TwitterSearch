@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "botao_generico_on.png",
+      "filename" : "icon_button_share_on.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "botao_generico_on@2x.png",
+      "filename" : "icon_button_share_on@2x.png",
       "scale" : "2x"
     },
     {

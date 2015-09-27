@@ -269,7 +269,7 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_search_big_white" translatesAutoresizingMaskIntoConstraints="NO" id="bfZ-W5-Nes">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_search_white" translatesAutoresizingMaskIntoConstraints="NO" id="bfZ-W5-Nes">
                                         <rect key="frame" x="20" y="24" width="40" height="40"/>
                                         <animations/>
                                         <constraints>
@@ -324,7 +324,7 @@
                                                                             <variation key="heightClass=regular-widthClass=regular" constant="77"/>
                                                                         </constraint>
                                                                     </constraints>
-                                                                    <state key="normal" image="icon_button_up"/>
+                                                                    <state key="normal" image="icon_bt_up"/>
                                                                     <variation key="default">
                                                                         <mask key="constraints">
                                                                             <exclude reference="jz2-uS-QQJ"/>
@@ -355,7 +355,7 @@
                                                                         <constraint firstAttribute="width" constant="77" id="Rfl-Ze-mnI"/>
                                                                         <constraint firstAttribute="width" secondItem="mmT-ek-8nR" secondAttribute="height" multiplier="1:1" id="xTG-rd-caQ"/>
                                                                     </constraints>
-                                                                    <state key="normal" image="icon_button_down">
+                                                                    <state key="normal" image="icon_bt_down">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
                                                                     <variation key="default">
@@ -388,7 +388,7 @@
                                                                         <constraint firstAttribute="height" constant="77" id="Jwg-f2-ac4"/>
                                                                         <constraint firstAttribute="width" secondItem="3M4-mg-mL7" secondAttribute="height" multiplier="1:1" id="WOA-zi-hCX"/>
                                                                     </constraints>
-                                                                    <state key="normal" image="icon_button_remove">
+                                                                    <state key="normal" image="icon_bt_remove">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
                                                                     <variation key="default">
@@ -421,7 +421,7 @@
                                                                         <constraint firstAttribute="width" secondItem="gVh-uf-Etw" secondAttribute="height" multiplier="1:1" id="U6d-pF-PEJ"/>
                                                                         <constraint firstAttribute="height" constant="77" id="iew-1R-2Mr"/>
                                                                     </constraints>
-                                                                    <state key="normal" image="icon_button_share">
+                                                                    <state key="normal" image="icon_bt_share">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
                                                                     <variation key="default">
@@ -576,12 +576,12 @@
     </scenes>
     <resources>
         <image name="Icon_search_big" width="74" height="74"/>
-        <image name="Icon_search_big_white" width="73" height="74"/>
+        <image name="Icon_search_white" width="73" height="74"/>
         <image name="Twitter_logo_blue" width="165" height="135"/>
-        <image name="icon_button_down" width="77" height="77"/>
-        <image name="icon_button_remove" width="77" height="77"/>
-        <image name="icon_button_share" width="77" height="77"/>
-        <image name="icon_button_up" width="77" height="77"/>
+        <image name="icon_bt_down" width="77" height="77"/>
+        <image name="icon_bt_remove" width="77" height="77"/>
+        <image name="icon_bt_share" width="77" height="77"/>
+        <image name="icon_bt_up" width="77" height="77"/>
         <image name="photo_placeholder" width="378" height="378"/>
     </resources>
 </document>

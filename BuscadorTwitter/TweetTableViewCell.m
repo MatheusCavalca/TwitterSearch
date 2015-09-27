@@ -14,10 +14,10 @@
 }
 
 - (void)awakeFromNib {
-    [self.buttonTop setImage:[UIImage imageNamed:@"icon_button_up_on"] forState:UIControlStateHighlighted];
-    [self.buttonBottom setImage:[UIImage imageNamed:@"icon_button_down_on"] forState:UIControlStateHighlighted];
-    [self.buttonRemove setImage:[UIImage imageNamed:@"icon_button_remove_on"] forState:UIControlStateHighlighted];
-    [self.buttonShare setImage:[UIImage imageNamed:@"icon_button_share_on"] forState:UIControlStateHighlighted];
+    [self.buttonTop setImage:[UIImage imageNamed:@"icon_bt_up_on"] forState:UIControlStateHighlighted];
+    [self.buttonBottom setImage:[UIImage imageNamed:@"icon_bt_down_on"] forState:UIControlStateHighlighted];
+    [self.buttonRemove setImage:[UIImage imageNamed:@"icon_bt_remove_on"] forState:UIControlStateHighlighted];
+    [self.buttonShare setImage:[UIImage imageNamed:@"icon_bt_share_on"] forState:UIControlStateHighlighted];
     
     UIPanGestureRecognizer* recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanOnContentView:)];
     recognizer.delegate = self;
