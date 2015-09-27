@@ -505,7 +505,7 @@
                                                     <constraints>
                                                         <constraint firstItem="hrR-K2-VzS" firstAttribute="top" secondItem="Izf-cr-rlM" secondAttribute="top" constant="20" id="0YG-i9-m7Q"/>
                                                         <constraint firstItem="jq0-jd-EXw" firstAttribute="top" secondItem="Izf-cr-rlM" secondAttribute="top" constant="20" id="4Av-A1-b4g"/>
-                                                        <constraint firstAttribute="bottom" secondItem="dxS-jT-j46" secondAttribute="bottom" constant="20" id="4dz-VJ-XeZ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dxS-jT-j46" secondAttribute="bottom" priority="999" constant="20" id="4dz-VJ-XeZ"/>
                                                         <constraint firstItem="dxS-jT-j46" firstAttribute="top" secondItem="hrR-K2-VzS" secondAttribute="bottom" constant="7.5" id="EOy-Hx-oJX"/>
                                                         <constraint firstItem="dxS-jT-j46" firstAttribute="leading" secondItem="jq0-jd-EXw" secondAttribute="trailing" constant="16" id="FJX-Cj-6ia"/>
                                                         <constraint firstItem="hrR-K2-VzS" firstAttribute="leading" secondItem="jq0-jd-EXw" secondAttribute="trailing" constant="16" id="ImS-hn-F1C"/>
@@ -635,8 +635,8 @@
                                                                     </state>
                                                                     <variation key="default">
                                                                         <mask key="constraints">
-                                                                            <exclude reference="rjs-Ic-wre"/>
                                                                             <exclude reference="T5y-Le-kqX"/>
+                                                                            <exclude reference="rjs-Ic-wre"/>
                                                                         </mask>
                                                                     </variation>
                                                                     <connections>
