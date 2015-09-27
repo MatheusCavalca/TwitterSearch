@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIView *viewTvs;
 @property (strong, nonatomic) IBOutlet UITableView *tvLastResearches;
 @property (strong, nonatomic) IBOutlet UITableView *tvTrends;
+@property (strong, nonatomic) IBOutlet UIButton *btLogin;
 @property (strong, nonatomic) IBOutlet ActivityIndicatorButton *btSearch;
 @property (strong, nonatomic) IBOutlet UIView *viewQuery;
 @property (strong, nonatomic) IBOutlet UITextField *txtQuery;

@@ -15,7 +15,8 @@
 @property (strong, nonatomic)NSString *text;
 @property (strong, nonatomic)NSString *pictureURL;
 @property (strong, nonatomic)UIImage *profilePicture;
+@property (strong, nonatomic)NSString *tweetID;
 
--(id)initWithProfileName:(NSString*)name text:(NSString*)text andProfilePictureUrl: (NSString*)profilePictureURL;
+-(id)initWithProfileName:(NSString*)name text:(NSString*)text tweetID:(NSString*)tweetID andProfilePictureUrl: (NSString*)profilePictureURL;
 
 @end

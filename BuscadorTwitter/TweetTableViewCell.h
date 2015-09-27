@@ -12,6 +12,7 @@
 - (void)buttonTopTouched:(NSInteger)cellIndex;
 - (void)buttonBottomTouched:(NSInteger)cellIndex;
 - (void)buttonRemoveTouched:(NSInteger)cellIndex;
+- (void)buttonShareTouched:(NSInteger)cellIndex;
 - (void)beganShowOption:(NSInteger)cellIndex;
 @end
 
@@ -27,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonTop;
 @property (strong, nonatomic) IBOutlet UIButton *buttonBottom;
 @property (strong, nonatomic) IBOutlet UIButton *buttonRemove;
+@property (strong, nonatomic) IBOutlet UIButton *buttonShare;
 
 - (void)showOption:(BOOL)animated;
 - (void)hideOption:(BOOL)animated;

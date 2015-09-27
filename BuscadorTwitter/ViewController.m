@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 #define MAIN_ROW_HEIGHT 40
-
 @interface ViewController ()
 
 @end
@@ -21,7 +20,7 @@
     
     NSMutableArray *arrayTweets;
     float offsetTwitterHeigth;
-    
+    float defaultTxtQueryWidth;
     BOOL alreadyAppearedOnce;
 }
 
@@ -61,6 +60,7 @@
     arrayTrends = [[NSMutableArray alloc] init];
     
     self.txtQuery.placeholder = NSLocalizedString(@"SEARCH_IT", nil);
+    [self.btLogin setTitle: NSLocalizedString(@"LOG_IN", nil) forState:UIControlStateNormal];;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -142,6 +142,14 @@
 #pragma mark - Twitter API and parser
 - (void)executeSearchTweetQuery{
     NSString *strSearch = self.txtQuery.text;
+    
+    // convert to a data object, using a lossy conversion to ASCII
+    NSData *asciiEncoded = [strSearch dataUsingEncoding:NSASCIIStringEncoding
+                             allowLossyConversion:YES];
+    // take the data object and recreate a string using the lossy conversion
+    strSearch = [[NSString alloc] initWithData:asciiEncoded
+                                            encoding:NSASCIIStringEncoding];
+    
     strSearch = [strSearch stringByReplacingOccurrencesOfString:@" "
                                                      withString:@"%20"];
     strSearch = [strSearch stringByReplacingOccurrencesOfString:@"@"
@@ -152,7 +160,6 @@
                                                      withString:@"%23"];
     
     NSString *strURL = [NSString stringWithFormat:@"https://api.twitter.com/1.1/search/tweets.json?q=%@", strSearch];
-    
     NSDictionary *params = @{};
     NSError *clientError;
     NSURLRequest *request = [[[Twitter sharedInstance] APIClient]
@@ -167,13 +174,11 @@
                       NSData *data,
                       NSError *connectionError) {
              if (data) {
-                 // handle the response data e.g.
                  NSError *jsonError;
                  NSDictionary *json = [NSJSONSerialization
                                        JSONObjectWithData:data
                                        options:0
                                        error:&jsonError];
-//                 NSLog(@"%@", json);
                  [self parseSearchTweetResponseWithData:json];
                  if(arrayTweets.count > 0){
                      [self requestProfilePicture:^(BOOL successOperation) {
@@ -204,28 +209,19 @@
 }
 
 - (void)parseSearchTweetResponseWithData:(NSDictionary*)jsonResponse{
-    //clean array before add current objects
+    //clear array before add current objects
     [arrayTweets removeAllObjects];
     
     NSArray *statuses = jsonResponse[@"statuses"];
     for(NSDictionary *dic in statuses){
         NSDictionary *dicUser = dic[@"user"];
-        Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] andProfilePictureUrl:dicUser[@"profile_image_url_https"]];
+        Tweet *newTweet = [[Tweet alloc] initWithProfileName:dicUser[@"name"] text:dic[@"text"] tweetID:[NSString stringWithFormat:@"%@",dic[@"id"]] andProfilePictureUrl:dicUser[@"profile_image_url_https"]];
         [arrayTweets addObject:newTweet];
     }
 }
 
 - (void)executeTrendsQuery:(void(^)(BOOL successOperation))completion{
-    NSString *strSearch = self.txtQuery.text;
-    strSearch = [strSearch stringByReplacingOccurrencesOfString:@" "
-                                                     withString:@"%20"];
-    strSearch = [strSearch stringByReplacingOccurrencesOfString:@"@"
-                                                     withString:@"%40"];
-    strSearch = [strSearch stringByReplacingOccurrencesOfString:@"\""
-                                                     withString:@"%22"];
-    
     NSString *statusesShowEndpoint = [NSString stringWithFormat:@"https://api.twitter.com/1.1/trends/place.json?id=1"];
-    
     NSDictionary *params = @{};
     NSError *clientError;
     NSURLRequest *request = [[[Twitter sharedInstance] APIClient]
@@ -261,7 +257,7 @@
 }
 
 - (void)parseTrendsWithData:(NSDictionary*)jsonResponse{
-    //clean array before add current objects
+    //clear array before add current objects
     [arrayTrends removeAllObjects];
     
     NSDictionary *arrayJson = [((NSArray*)jsonResponse) objectAtIndex:0];
@@ -277,7 +273,6 @@
 
 - (void)requestProfilePicture:(void(^)(BOOL successOperation))completion{
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    
     for(Tweet *tweet in arrayTweets){
         NSString *strHighQualityPicture = [tweet.pictureURL stringByReplacingOccurrencesOfString: @"_normal" withString: @""];
         NSURL *pictureURL = [NSURL URLWithString:strHighQualityPicture];
@@ -292,25 +287,22 @@
             }
         }] resume];
     }
-    
-
-    
     for(int i=0; i<arrayTweets.count; i++){
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     }
     completion(true);
 }
 
-- (void)twitterLoginButton{
-    //    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
-    // play with Twitter session
-    
-    //    }];
-    //    logInButton.center = self.view.center;
-    //    [self.view addSubview:logInButton];
-}
-
 #pragma mark - Action methods
+- (IBAction)btLoginTwitterTouched:(id)sender {
+    [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
+        if (session) {
+            NSLog(@"signed in as %@", [session userName]);
+        } else {
+            NSLog(@"error: %@", [error localizedDescription]);
+        }
+    }];
+}
 
 - (IBAction)btSearchTouched:(id)sender {
     [self.btSearch presentActivityIndicator];
@@ -326,6 +318,7 @@
 - (void)tappedMainView:(id)sender{
     [self.txtQuery resignFirstResponder];
 }
+
 #pragma mark - Navigation Methods
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -335,8 +328,13 @@
         destination.querySearched = self.txtQuery.text;
     }
 }
+
 #pragma mark - UITextField Delegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if(defaultTxtQueryWidth == 0){
+        defaultTxtQueryWidth = self.txtQuery.frame.size.width;
+    }
+    
     NSString *strReplaced = [textField.text stringByReplacingCharactersInRange:range withString:string];
     NSDictionary *attributes = @{NSFontAttributeName: self.txtQuery.font};
     CGSize newSize = [strReplaced sizeWithAttributes:attributes];
@@ -348,10 +346,12 @@
     if(correctNewWidth > correctMaxWidth){
         self.searchTextFieldWidthConstraint.constant = correctMaxWidth;
     }
+    else if(correctNewWidth < defaultTxtQueryWidth){
+        self.searchTextFieldWidthConstraint.constant = defaultTxtQueryWidth;
+    }
     else{
         self.searchTextFieldWidthConstraint.constant = correctNewWidth;
     }
-    
     return YES;
 }
 
@@ -362,6 +362,7 @@
     [self.txtQuery resignFirstResponder];
     return YES;
 }
+
 #pragma mark - Keyboard notifications
 
 - (void)keyboardWillShow:(NSNotification *)notification

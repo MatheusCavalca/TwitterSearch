@@ -26,9 +26,61 @@
     self.tvMain.estimatedRowHeight = 140.0f;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma marl - Auxiliar methods
+- (void)executeSearchTweetQuery:(Tweet*)tweetToShare{
+    NSString *strURL = [NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/retweet/%@.json", tweetToShare.tweetID];
+    NSDictionary *params = @{};
+    NSError *clientError;
+    NSURLRequest *request = [[[Twitter sharedInstance] APIClient]
+                             URLRequestWithMethod:@"POST"
+                             URL:strURL
+                             parameters:params
+                             error:&clientError];
+    if (request) {
+        [[[Twitter sharedInstance] APIClient]
+         sendTwitterRequest:request
+         completion:^(NSURLResponse *response,
+                      NSData *data,
+                      NSError *connectionError) {
+             if (data) {
+                 // handle the response data e.g.
+                 NSError *jsonError;
+                 NSDictionary *json = [NSJSONSerialization
+                                       JSONObjectWithData:data
+                                       options:0
+                                       error:&jsonError];
+                  NSLog(@"%@", json);
+             }
+             else {
+                 NSLog(@"Error: %@", connectionError);
+                 [self presentLoginAlertView];
+             }
+         }];
+    }
+    else {
+        NSLog(@"Error: %@", clientError);
+    }
+}
+
+- (void)presentLoginAlertView{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"NOT_ALLOWED", nil) message:NSLocalizedString(@"PLEASE_LOGIN_FIRST", nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:ok];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)hideOptionsForCellsBut:(NSInteger)cellIndex{
+    UITableView *tableView = self.tvMain;
+    NSArray *paths = [tableView indexPathsForVisibleRows];
+    for (NSIndexPath *path in paths) {
+        if(path.row != cellIndex){
+            TweetTableViewCell *cell = [tableView cellForRowAtIndexPath:path];
+            if(cell.showingOption){
+                [cell hideOption:YES];
+            }
+        }
+    }
 }
 
 #pragma mark - UITableView DataSource/Delegate
@@ -45,17 +97,17 @@
     cell.tag = indexPath.row;
     cell.delegate = self;
     
-    if(cell.showingOption){
-        [cell showOption:NO];
-    }
-    else{
-        [cell hideOption:NO];
-    }
+    [cell hideOption:NO];
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.arrayTweets.count;
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self hideOptionsForCellsBut:-1];
 }
 
 #pragma mark - Action methods
@@ -69,29 +121,44 @@
     Tweet *tAux = [self.arrayTweets objectAtIndex:cellIndex];
     [self.arrayTweets removeObjectAtIndex:cellIndex];
     [self.arrayTweets insertObject:tAux atIndex:0];
+    [CATransaction begin];
+    [CATransaction setCompletionBlock:^{
+        [self.tvMain reloadData];
+    }];
     [self.tvMain moveRowAtIndexPath:[NSIndexPath indexPathForRow:cellIndex inSection:0] toIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [CATransaction commit];
 }
+
 - (void)buttonBottomTouched:(NSInteger)cellIndex{
     Tweet *tAux = [self.arrayTweets objectAtIndex:cellIndex];
     [self.arrayTweets removeObjectAtIndex:cellIndex];
     [self.arrayTweets addObject:tAux];
+    [CATransaction begin];
+    [CATransaction setCompletionBlock:^{
+        [self.tvMain reloadData];
+    }];
     [self.tvMain moveRowAtIndexPath:[NSIndexPath indexPathForRow:cellIndex inSection:0] toIndexPath:[NSIndexPath indexPathForRow:self.arrayTweets.count-1 inSection:0]];
+        
+    [CATransaction commit];
 }
+
 - (void)buttonRemoveTouched:(NSInteger)cellIndex{
     [self.arrayTweets removeObjectAtIndex:cellIndex];
-    [self.tvMain deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:cellIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    [CATransaction begin];
+    [CATransaction setCompletionBlock:^{
+    [self.tvMain reloadData];
+    }];
+    [self.tvMain deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:cellIndex inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+    [CATransaction commit];
 }
+
+- (void)buttonShareTouched:(NSInteger)cellIndex{
+    [self executeSearchTweetQuery:self.arrayTweets[cellIndex]];
+    [self hideOptionsForCellsBut:cellIndex];
+}
+
 - (void)beganShowOption:(NSInteger)cellIndex{
-    UITableView *tableView = self.tvMain;
-    NSArray *paths = [tableView indexPathsForVisibleRows];
-    for (NSIndexPath *path in paths) {
-        if(path.row != cellIndex){
-            TweetTableViewCell *cell = [tableView cellForRowAtIndexPath:path];
-            if(cell.showingOption){
-                [cell hideOption:YES];
-            }
-        }
-    }
+    [self hideOptionsForCellsBut:cellIndex];
 }
 
 @end

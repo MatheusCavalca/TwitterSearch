@@ -17,6 +17,7 @@
     [self.buttonTop setImage:[UIImage imageNamed:@"icon_button_up_on"] forState:UIControlStateHighlighted];
     [self.buttonBottom setImage:[UIImage imageNamed:@"icon_button_down_on"] forState:UIControlStateHighlighted];
     [self.buttonRemove setImage:[UIImage imageNamed:@"icon_button_remove_on"] forState:UIControlStateHighlighted];
+    [self.buttonShare setImage:[UIImage imageNamed:@"icon_button_share_on"] forState:UIControlStateHighlighted];
     
     UIPanGestureRecognizer* recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanOnContentView:)];
     recognizer.delegate = self;
@@ -67,9 +68,15 @@
     }
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-{
-    return YES;
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]){
+        CGPoint translation = [(UIPanGestureRecognizer*)gestureRecognizer translationInView:[self superview]];
+        // Check for horizontal gesture
+        if (fabs(translation.x) > fabs(translation.y)) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 #pragma mark - Auxiliar methods
@@ -106,5 +113,8 @@
 
 - (IBAction)buttonRemoveTouched:(id)sender {
     [self.delegate buttonRemoveTouched:[self tag]];
+}
+- (IBAction)buttonShareTouched:(id)sender {
+    [self.delegate buttonShareTouched:[self tag]];
 }
 @end

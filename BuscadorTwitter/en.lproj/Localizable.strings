@@ -5,6 +5,9 @@
   Created by Matheus Cavalca on 9/27/15.
   Copyright © 2015 Matheus Cavalca. All rights reserved.
 */
-"RECENT_SEARCHES" = "Recent Searche";
+"RECENT_SEARCHES" = "Recent Searches";
 "TRENDING_NOW" = "Trending Now";
 "SEARCH_IT" = "Search it";
+"LOG_IN" = "Log in";
+"NOT_ALLOWED" = "Not allowed!";
+"PLEASE_LOGIN_FIRST" = "Please log in at home screen first";
