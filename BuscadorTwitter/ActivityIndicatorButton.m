@@ -10,26 +10,26 @@
 
 @implementation ActivityIndicatorButton
 {
-    UIActivityIndicatorView *activityIndicator;
+    DGActivityIndicatorView *activityIndicatorView;
 }
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    CGFloat halfButtonHeight = self.bounds.size.height/2;
-    CGFloat halfButtonWidth = self.bounds.size.width/2;
-    [self addSubview:activityIndicator];
-    activityIndicator.center = CGPointMake(halfButtonWidth , halfButtonHeight);
 }
 
 - (void)presentActivityIndicator{
+    activityIndicatorView = [[DGActivityIndicatorView alloc] initWithType:DGActivityIndicatorAnimationTypeTriplePulse tintColor:[UIColor colorWithRed:94.0f/255.0f green:159.0f/255.0f blue:202.0f/255.0f alpha:.7f] size:self.frame.size.width];
+    activityIndicatorView.frame = CGRectMake(20.0f, 20.0f, self.frame.size.width-40, self.frame.size.height-40);
+    [self addSubview:activityIndicatorView];
+
     [self setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [activityIndicator startAnimating];
+    [activityIndicatorView startAnimating];
 }
 
 - (void)hideActivityIndicator{
     [self setImage:[UIImage imageNamed:@"Icon_search_big"] forState:UIControlStateNormal];
-    [activityIndicator stopAnimating];
+    [activityIndicatorView stopAnimating];
+    [activityIndicatorView removeFromSuperview];
 }
 
 @end

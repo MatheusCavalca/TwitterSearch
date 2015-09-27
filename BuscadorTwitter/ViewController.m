@@ -60,24 +60,20 @@
     arrayTrends = [[NSMutableArray alloc] init];
     
     self.txtQuery.placeholder = NSLocalizedString(@"SEARCH_IT", nil);
-    [self.btLogin setTitle: NSLocalizedString(@"LOG_IN", nil) forState:UIControlStateNormal];;
+    [self.btLogin setTitle: NSLocalizedString(@"LOG_IN", nil) forState:UIControlStateNormal];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
     if(alreadyAppearedOnce){
         [self.txtQuery becomeFirstResponder];
     }
     alreadyAppearedOnce = true;
-    
     arrayLastSearches = [RecentSearches loadFiveRecentSearches];
     [self.tvLastResearches reloadData];
-    
     [self executeTrendsQuery:^(BOOL successOperation) {
         [self.tvTrends reloadData];
     }];
-    
 }
 
 #pragma mark - UITableView DataSource/Delegate

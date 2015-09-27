@@ -1,4 +1,5 @@
 PODS:
+  - DGActivityIndicatorView (1.0)
   - Fabric (1.5.1):
     - Fabric/Base (= 1.5.1)
   - Fabric/Base (1.5.1)
@@ -6,11 +7,13 @@ PODS:
   - TwitterKit (1.11.1)
 
 DEPENDENCIES:
+  - DGActivityIndicatorView
   - Fabric
   - TwitterCore
   - TwitterKit
 
 SPEC CHECKSUMS:
+  DGActivityIndicatorView: 980091f8d8cc647a1af7804660272e64aef9e516
   Fabric: 03c3b3fe77e11a2bc31421b989a9c7adaa4779a5
   TwitterCore: 9ec69df7571207044b1a2f57ae2c87fe73348ac5
   TwitterKit: bce9f0eac1e186caab5aa570d64d82c5cb9089be

@@ -5,6 +5,7 @@ target 'BuscadorTwitter' do
     pod 'Fabric'
     pod 'TwitterKit'
     pod 'TwitterCore'
+    pod 'DGActivityIndicatorView'
 end
 
 target 'BuscadorTwitterTests' do

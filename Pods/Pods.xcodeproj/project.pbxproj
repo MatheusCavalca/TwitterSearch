@@ -7,78 +7,185 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		514DD829DC56511562EC5CCA1317D5D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2098A5CA765AC67E31F6E4E6EC2C3A /* Foundation.framework */; };
-		72EF4706FDDDA8DF23F0939327259888 /* Pods-BuscadorTwitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61783B4F1674960447351C06BBABE31D /* Pods-BuscadorTwitter-dummy.m */; };
+		05CBAAAD6938CA5BA8A805C7CC03DD04 /* DGActivityIndicatorTwoDotsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B2450B94B0B449CA0B3D81902FD59AE8 /* DGActivityIndicatorTwoDotsAnimation.h */; };
+		0F0ABA382B3FF9115388D19D48D0FABB /* Pods-BuscadorTwitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7CEC293D07C4ADD5255B1E24E22F1 /* Pods-BuscadorTwitter-dummy.m */; };
+		2A9627D83F7101AACA085F2A399DAD81 /* DGActivityIndicatorRotatingSquaresAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC0C2317F515F1F12E16F171025DA06 /* DGActivityIndicatorRotatingSquaresAnimation.h */; };
+		329C29219413E084AED6CAD636194F0B /* DGActivityIndicatorTwoDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E95934AC767579AF78CF4307B01FCE /* DGActivityIndicatorTwoDotsAnimation.m */; };
+		35A506EBD0359E426F2313A26A2BCC2A /* DGActivityIndicatorFiveDotsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 929A95C8BCB708D2DBCF05AA8957BCCC /* DGActivityIndicatorFiveDotsAnimation.h */; };
+		478CB84D76FE855ED154CCDD27E998C9 /* DGActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 133DEB6955764C7659F3FA04E19B0468 /* DGActivityIndicatorView.m */; };
+		7323FC099F871FD42A2C3344537855C5 /* DGActivityIndicatorNineDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9C248CD58DFEA694DA8BEB2206744 /* DGActivityIndicatorNineDotsAnimation.m */; };
+		791A13F0204C31870C410F1E06DDD61D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D800B53911183074ABB86974A7C9BCA4 /* Foundation.framework */; };
+		8A9FF8330FDF3524D0793C867EE771F4 /* DGActivityIndicatorNineDotsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E8B51BBA3BD9731A8911AA80CB38B31 /* DGActivityIndicatorNineDotsAnimation.h */; };
+		8D29D1D0EFD86DC3CD2E85AB95E1301B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D800B53911183074ABB86974A7C9BCA4 /* Foundation.framework */; };
+		9D250E2F4DA76AA89268865586948300 /* DGActivityIndicatorTriplePulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F72C2D7CCA00B523D15DBDAEB2C39DF6 /* DGActivityIndicatorTriplePulseAnimation.m */; };
+		9DBB3044B29A3A13D1F479F8C26B548C /* DGActivityIndicatorTriplePulseAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = F51667B1D6FB22CB3F8146C88F0CEAE8 /* DGActivityIndicatorTriplePulseAnimation.h */; };
+		A102108C94BBC9EC963F453C35B04A27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B922DBFB5CE7C7DC7D97A139329F456 /* UIKit.framework */; };
+		B1E4253A7D0975C8DD224D8C9DF32530 /* DGActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA533ECC6233F8DF74CA045D2B87F1FF /* DGActivityIndicatorView-dummy.m */; };
+		B99C3EB5D5FB30A13CF3E6EB404D8358 /* DGActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B243DF6F72D1E2D2BAB321AA5565036B /* DGActivityIndicatorView.h */; };
+		BB96EF3FE8B82F1CBC86EA7960EABD94 /* DGActivityIndicatorAnimationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D097563CB82A5B43E68B916850F75663 /* DGActivityIndicatorAnimationProtocol.h */; };
+		BEE20EC16B2ED4E5B6B6EAC220ADC57C /* DGActivityIndicatorRotatingSquaresAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1224CB958DB213D1AAB964DB5D0F33 /* DGActivityIndicatorRotatingSquaresAnimation.m */; };
+		C291135B8F70B23323D7DC657F7D9F3F /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E018B2A310F143E059931E668D16C3E /* DGActivityIndicatorDoubleBounceAnimation.m */; };
+		F62A83691561DE3E68B19908026AA59A /* DGActivityIndicatorFiveDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F65861F960D21E2A3C8A7B8DFDDF8EF1 /* DGActivityIndicatorFiveDotsAnimation.m */; };
+		F7D0369AFAEA927F30BBC113E49687BF /* DGActivityIndicatorDoubleBounceAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 06DDD126141E0B817A1DFD8B5CF9D863 /* DGActivityIndicatorDoubleBounceAnimation.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B1471265BBCBBC265AFE7DEE0517F8BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECA401B017BAA4F7FD62F96E340466DB;
+			remoteInfo = DGActivityIndicatorView;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		04E39D59307481684AF2B725D9355D69 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		04EE678B8AB04117735820A64A19461E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
-		2B2098A5CA765AC67E31F6E4E6EC2C3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		61783B4F1674960447351C06BBABE31D /* Pods-BuscadorTwitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BuscadorTwitter-dummy.m"; sourceTree = "<group>"; };
+		06DDD126141E0B817A1DFD8B5CF9D863 /* DGActivityIndicatorDoubleBounceAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorDoubleBounceAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorDoubleBounceAnimation.h; sourceTree = "<group>"; };
+		0F1224CB958DB213D1AAB964DB5D0F33 /* DGActivityIndicatorRotatingSquaresAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorRotatingSquaresAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorRotatingSquaresAnimation.m; sourceTree = "<group>"; };
+		133DEB6955764C7659F3FA04E19B0468 /* DGActivityIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorView.m; path = DGActivityIndicatorView/DGActivityIndicatorView.m; sourceTree = "<group>"; };
+		19BFFAAA8A3A7EB9A0B57F7246B9E234 /* libPods-BuscadorTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuscadorTwitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC7CEC293D07C4ADD5255B1E24E22F1 /* Pods-BuscadorTwitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BuscadorTwitter-dummy.m"; sourceTree = "<group>"; };
+		2FC9C248CD58DFEA694DA8BEB2206744 /* DGActivityIndicatorNineDotsAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorNineDotsAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorNineDotsAnimation.m; sourceTree = "<group>"; };
+		4E8B51BBA3BD9731A8911AA80CB38B31 /* DGActivityIndicatorNineDotsAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorNineDotsAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorNineDotsAnimation.h; sourceTree = "<group>"; };
+		54E2CCC8F024C387154565719ABF6EE2 /* libDGActivityIndicatorView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDGActivityIndicatorView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E95934AC767579AF78CF4307B01FCE /* DGActivityIndicatorTwoDotsAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorTwoDotsAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorTwoDotsAnimation.m; sourceTree = "<group>"; };
+		65BDD10A879838C95C8B0276E6AD3309 /* Pods-BuscadorTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		665C5D5ABBBE31F6524BACAC4A5A91EE /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		6C5ED61FEAC5CC58E29038C80234E6DB /* DGActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
+		703597E14AB633E905485F97E9A582C9 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		727DB0310F571C72FF187C207B6AA315 /* Pods-BuscadorTwitter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BuscadorTwitter-resources.sh"; sourceTree = "<group>"; };
-		808092380820A8C11BBAD0DCD7AB6C84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		8B5759E10DE09D5607EE2B214DFCE9D0 /* Pods-BuscadorTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.release.xcconfig"; sourceTree = "<group>"; };
+		7B922DBFB5CE7C7DC7D97A139329F456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A778FE58E99AB11F73A4E3FE82F798A /* Pods-BuscadorTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.release.xcconfig"; sourceTree = "<group>"; };
 		8CA9DB2E9E0334C78EA36B184D976AE9 /* Pods-BuscadorTwitter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BuscadorTwitter-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B8A693A8D7E1E1E30DC3F2DF68568F25 /* libPods-BuscadorTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuscadorTwitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E018B2A310F143E059931E668D16C3E /* DGActivityIndicatorDoubleBounceAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorDoubleBounceAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorDoubleBounceAnimation.m; sourceTree = "<group>"; };
+		929A95C8BCB708D2DBCF05AA8957BCCC /* DGActivityIndicatorFiveDotsAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorFiveDotsAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorFiveDotsAnimation.h; sourceTree = "<group>"; };
+		988779DC372B0037ABC5160676B6AB3C /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		9D492B67F6FCA065E615FD11E33F3C1D /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		B243DF6F72D1E2D2BAB321AA5565036B /* DGActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorView.h; path = DGActivityIndicatorView/DGActivityIndicatorView.h; sourceTree = "<group>"; };
+		B2450B94B0B449CA0B3D81902FD59AE8 /* DGActivityIndicatorTwoDotsAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorTwoDotsAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorTwoDotsAnimation.h; sourceTree = "<group>"; };
+		B90F033C070E6D2ED3F89E6A87E56B63 /* DGActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
+		BA533ECC6233F8DF74CA045D2B87F1FF /* DGActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D1C77C1B4D45B13E88CA47E6BD43A63F /* Pods-BuscadorTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.debug.xcconfig"; sourceTree = "<group>"; };
-		E1F7CED7EFFC782BA5BCF9C65FB8FE7F /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		CDC0C2317F515F1F12E16F171025DA06 /* DGActivityIndicatorRotatingSquaresAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorRotatingSquaresAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorRotatingSquaresAnimation.h; sourceTree = "<group>"; };
+		D097563CB82A5B43E68B916850F75663 /* DGActivityIndicatorAnimationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorAnimationProtocol.h; path = DGActivityIndicatorView/DGActivityIndicatorAnimationProtocol.h; sourceTree = "<group>"; };
+		D800B53911183074ABB86974A7C9BCA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E2B25A4F3F6C497BC92CBEC495FC1A3D /* DGActivityIndicatorView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DGActivityIndicatorView-Private.xcconfig"; sourceTree = "<group>"; };
+		F51667B1D6FB22CB3F8146C88F0CEAE8 /* DGActivityIndicatorTriplePulseAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorTriplePulseAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorTriplePulseAnimation.h; sourceTree = "<group>"; };
+		F65861F960D21E2A3C8A7B8DFDDF8EF1 /* DGActivityIndicatorFiveDotsAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorFiveDotsAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorFiveDotsAnimation.m; sourceTree = "<group>"; };
 		F6667A35108A2D8D71693A9DB8343103 /* Pods-BuscadorTwitter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BuscadorTwitter-acknowledgements.plist"; sourceTree = "<group>"; };
+		F72C2D7CCA00B523D15DBDAEB2C39DF6 /* DGActivityIndicatorTriplePulseAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorTriplePulseAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorTriplePulseAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20F9D037BE0D96B4CDC68BEA2FF022C5 /* Frameworks */ = {
+		0145161ED8EDDFFF2662B1989065A3D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514DD829DC56511562EC5CCA1317D5D4 /* Foundation.framework in Frameworks */,
+				8D29D1D0EFD86DC3CD2E85AB95E1301B /* Foundation.framework in Frameworks */,
+				A102108C94BBC9EC963F453C35B04A27 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AB989BAB08E8E5938F3758D1EF12DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791A13F0204C31870C410F1E06DDD61D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20D1E612B0914806EF3C8B0BF8A12A27 /* Pods */ = {
+		0534B7AEC97720C97AFE0A3CA535DABF /* DGActivityIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
-				41919487AEDE29CC53FC94B9EEE66D97 /* Fabric */,
-				66E6A3B97329AA8D102CF49A6EAE8C42 /* TwitterCore */,
-				C153494D9C466AF7986AA36B04FCE051 /* TwitterKit */,
+				D097563CB82A5B43E68B916850F75663 /* DGActivityIndicatorAnimationProtocol.h */,
+				06DDD126141E0B817A1DFD8B5CF9D863 /* DGActivityIndicatorDoubleBounceAnimation.h */,
+				8E018B2A310F143E059931E668D16C3E /* DGActivityIndicatorDoubleBounceAnimation.m */,
+				929A95C8BCB708D2DBCF05AA8957BCCC /* DGActivityIndicatorFiveDotsAnimation.h */,
+				F65861F960D21E2A3C8A7B8DFDDF8EF1 /* DGActivityIndicatorFiveDotsAnimation.m */,
+				4E8B51BBA3BD9731A8911AA80CB38B31 /* DGActivityIndicatorNineDotsAnimation.h */,
+				2FC9C248CD58DFEA694DA8BEB2206744 /* DGActivityIndicatorNineDotsAnimation.m */,
+				CDC0C2317F515F1F12E16F171025DA06 /* DGActivityIndicatorRotatingSquaresAnimation.h */,
+				0F1224CB958DB213D1AAB964DB5D0F33 /* DGActivityIndicatorRotatingSquaresAnimation.m */,
+				F51667B1D6FB22CB3F8146C88F0CEAE8 /* DGActivityIndicatorTriplePulseAnimation.h */,
+				F72C2D7CCA00B523D15DBDAEB2C39DF6 /* DGActivityIndicatorTriplePulseAnimation.m */,
+				B2450B94B0B449CA0B3D81902FD59AE8 /* DGActivityIndicatorTwoDotsAnimation.h */,
+				58E95934AC767579AF78CF4307B01FCE /* DGActivityIndicatorTwoDotsAnimation.m */,
+				B243DF6F72D1E2D2BAB321AA5565036B /* DGActivityIndicatorView.h */,
+				133DEB6955764C7659F3FA04E19B0468 /* DGActivityIndicatorView.m */,
+				B2F75D7640A5DFCD5C0B2EE9B9B3CEB5 /* Support Files */,
 			);
-			name = Pods;
+			path = DGActivityIndicatorView;
 			sourceTree = "<group>";
 		};
-		281264A27C4C4060141789A475FDDD3C /* Frameworks */ = {
+		061FF3D53E6B9BECE006D8CD04F8C576 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				04E39D59307481684AF2B725D9355D69 /* TwitterCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		41919487AEDE29CC53FC94B9EEE66D97 /* Fabric */ = {
-			isa = PBXGroup;
-			children = (
-				4598C4A01720DE02879D8FED69513037 /* Base */,
+				C79187468E3BF1171B0E0962D4601398 /* Base */,
 			);
 			path = Fabric;
 			sourceTree = "<group>";
 		};
-		4598C4A01720DE02879D8FED69513037 /* Base */ = {
+		2190548E41E60FFEF2E9E2707EC03A6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D75CEE4E7B007E725C080B26FFC3CECD /* Frameworks */,
+				703597E14AB633E905485F97E9A582C9 /* TwitterCore.framework */,
 			);
-			name = Base;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+		2C299567E271BB9FA4A090F93B9AE210 /* TwitterKit */ = {
 			isa = PBXGroup;
 			children = (
-				2B2098A5CA765AC67E31F6E4E6EC2C3A /* Foundation.framework */,
+				3B3B0FC0D0405BBA2756A63C0EE8F2A5 /* Frameworks */,
+				8B7DDC54F308FAF833C6B619E0EEC924 /* Resources */,
 			);
-			name = iOS;
+			path = TwitterKit;
+			sourceTree = "<group>";
+		};
+		341C27415CE17EECD773F1314ACC4F7B /* TwitterCore */ = {
+			isa = PBXGroup;
+			children = (
+				2190548E41E60FFEF2E9E2707EC03A6B /* Frameworks */,
+			);
+			path = TwitterCore;
+			sourceTree = "<group>";
+		};
+		3B3B0FC0D0405BBA2756A63C0EE8F2A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D492B67F6FCA065E615FD11E33F3C1D /* TwitterKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0FB9306D21AF23A056944AE037CBFFF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CEBE43050A9172B81EFEC1A53F077FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				665C5D5ABBBE31F6524BACAC4A5A91EE /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53815DA3E1EED881DC25A012309E64A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0534B7AEC97720C97AFE0A3CA535DABF /* DGActivityIndicatorView */,
+				061FF3D53E6B9BECE006D8CD04F8C576 /* Fabric */,
+				341C27415CE17EECD773F1314ACC4F7B /* TwitterCore */,
+				2C299567E271BB9FA4A090F93B9AE210 /* TwitterKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		5B2A9518EEA4893CB1D880104211679F /* Targets Support Files */ = {
@@ -89,23 +196,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		66E6A3B97329AA8D102CF49A6EAE8C42 /* TwitterCore */ = {
-			isa = PBXGroup;
-			children = (
-				281264A27C4C4060141789A475FDDD3C /* Frameworks */,
-			);
-			path = TwitterCore;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				20D1E612B0914806EF3C8B0BF8A12A27 /* Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				53815DA3E1EED881DC25A012309E64A0 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				5B2A9518EEA4893CB1D880104211679F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8B7DDC54F308FAF833C6B619E0EEC924 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				988779DC372B0037ABC5160676B6AB3C /* TwitterKitResources.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		93F2E858C183A68E7EA45726EE649660 /* Pods-BuscadorTwitter */ = {
@@ -113,81 +220,106 @@
 			children = (
 				8CA9DB2E9E0334C78EA36B184D976AE9 /* Pods-BuscadorTwitter-acknowledgements.markdown */,
 				F6667A35108A2D8D71693A9DB8343103 /* Pods-BuscadorTwitter-acknowledgements.plist */,
-				61783B4F1674960447351C06BBABE31D /* Pods-BuscadorTwitter-dummy.m */,
+				1EC7CEC293D07C4ADD5255B1E24E22F1 /* Pods-BuscadorTwitter-dummy.m */,
 				727DB0310F571C72FF187C207B6AA315 /* Pods-BuscadorTwitter-resources.sh */,
-				D1C77C1B4D45B13E88CA47E6BD43A63F /* Pods-BuscadorTwitter.debug.xcconfig */,
-				8B5759E10DE09D5607EE2B214DFCE9D0 /* Pods-BuscadorTwitter.release.xcconfig */,
+				65BDD10A879838C95C8B0276E6AD3309 /* Pods-BuscadorTwitter.debug.xcconfig */,
+				8A778FE58E99AB11F73A4E3FE82F798A /* Pods-BuscadorTwitter.release.xcconfig */,
 			);
 			name = "Pods-BuscadorTwitter";
 			path = "Target Support Files/Pods-BuscadorTwitter";
 			sourceTree = "<group>";
 		};
-		9958567BEA943CBA5CD7652B4EDFD6FF /* Frameworks */ = {
+		B2F75D7640A5DFCD5C0B2EE9B9B3CEB5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1F7CED7EFFC782BA5BCF9C65FB8FE7F /* TwitterKit.framework */,
+				B90F033C070E6D2ED3F89E6A87E56B63 /* DGActivityIndicatorView.xcconfig */,
+				E2B25A4F3F6C497BC92CBEC495FC1A3D /* DGActivityIndicatorView-Private.xcconfig */,
+				BA533ECC6233F8DF74CA045D2B87F1FF /* DGActivityIndicatorView-dummy.m */,
+				6C5ED61FEAC5CC58E29038C80234E6DB /* DGActivityIndicatorView-prefix.pch */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/DGActivityIndicatorView";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C79187468E3BF1171B0E0962D4601398 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+				4CEBE43050A9172B81EFEC1A53F077FA /* Frameworks */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C153494D9C466AF7986AA36B04FCE051 /* TwitterKit */ = {
-			isa = PBXGroup;
-			children = (
-				9958567BEA943CBA5CD7652B4EDFD6FF /* Frameworks */,
-				ECE1A6433714DBA9584042CC97D55D38 /* Resources */,
-			);
-			path = TwitterKit;
+			name = Base;
 			sourceTree = "<group>";
 		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8A693A8D7E1E1E30DC3F2DF68568F25 /* libPods-BuscadorTwitter.a */,
+				54E2CCC8F024C387154565719ABF6EE2 /* libDGActivityIndicatorView.a */,
+				19BFFAAA8A3A7EB9A0B57F7246B9E234 /* libPods-BuscadorTwitter.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D75CEE4E7B007E725C080B26FFC3CECD /* Frameworks */ = {
+		D0FB9306D21AF23A056944AE037CBFFF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				808092380820A8C11BBAD0DCD7AB6C84 /* Fabric.framework */,
+				D800B53911183074ABB86974A7C9BCA4 /* Foundation.framework */,
+				7B922DBFB5CE7C7DC7D97A139329F456 /* UIKit.framework */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ECE1A6433714DBA9584042CC97D55D38 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				04EE678B8AB04117735820A64A19461E /* TwitterKitResources.bundle */,
-			);
-			name = Resources;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		43DC0062C0417B5006508B0264AC9766 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB96EF3FE8B82F1CBC86EA7960EABD94 /* DGActivityIndicatorAnimationProtocol.h in Headers */,
+				F7D0369AFAEA927F30BBC113E49687BF /* DGActivityIndicatorDoubleBounceAnimation.h in Headers */,
+				35A506EBD0359E426F2313A26A2BCC2A /* DGActivityIndicatorFiveDotsAnimation.h in Headers */,
+				8A9FF8330FDF3524D0793C867EE771F4 /* DGActivityIndicatorNineDotsAnimation.h in Headers */,
+				2A9627D83F7101AACA085F2A399DAD81 /* DGActivityIndicatorRotatingSquaresAnimation.h in Headers */,
+				9DBB3044B29A3A13D1F479F8C26B548C /* DGActivityIndicatorTriplePulseAnimation.h in Headers */,
+				05CBAAAD6938CA5BA8A805C7CC03DD04 /* DGActivityIndicatorTwoDotsAnimation.h in Headers */,
+				B99C3EB5D5FB30A13CF3E6EB404D8358 /* DGActivityIndicatorView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		1F4CE187B9CE28BF4E24EDF9CEEFDD8B /* Pods-BuscadorTwitter */ = {
+		6FEFCF51B3727E2ED816F9C22DE6C93D /* Pods-BuscadorTwitter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AF57CEBDCD9100CC387F2C387D24575 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */;
+			buildConfigurationList = F72C6163F434BEBE090DBCF51C6DCD40 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */;
 			buildPhases = (
-				D43EC9B46AB9146A1276EA19C30AA571 /* Sources */,
-				20F9D037BE0D96B4CDC68BEA2FF022C5 /* Frameworks */,
+				556B531BF4B8051688C2B11192C912C4 /* Sources */,
+				2AB989BAB08E8E5938F3758D1EF12DAC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19994165451F4F0D6650B9F6DC6BC49A /* PBXTargetDependency */,
+			);
+			name = "Pods-BuscadorTwitter";
+			productName = "Pods-BuscadorTwitter";
+			productReference = 19BFFAAA8A3A7EB9A0B57F7246B9E234 /* libPods-BuscadorTwitter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECA401B017BAA4F7FD62F96E340466DB /* DGActivityIndicatorView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBD9F358EE325480CD7734BEE6E760A4 /* Build configuration list for PBXNativeTarget "DGActivityIndicatorView" */;
+			buildPhases = (
+				965D297FFCDFD2A7C39655F00902464A /* Sources */,
+				0145161ED8EDDFFF2662B1989065A3D7 /* Frameworks */,
+				43DC0062C0417B5006508B0264AC9766 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-BuscadorTwitter";
-			productName = "Pods-BuscadorTwitter";
-			productReference = B8A693A8D7E1E1E30DC3F2DF68568F25 /* libPods-BuscadorTwitter.a */;
+			name = DGActivityIndicatorView;
+			productName = DGActivityIndicatorView;
+			productReference = 54E2CCC8F024C387154565719ABF6EE2 /* libDGActivityIndicatorView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -211,26 +343,67 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1F4CE187B9CE28BF4E24EDF9CEEFDD8B /* Pods-BuscadorTwitter */,
+				ECA401B017BAA4F7FD62F96E340466DB /* DGActivityIndicatorView */,
+				6FEFCF51B3727E2ED816F9C22DE6C93D /* Pods-BuscadorTwitter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D43EC9B46AB9146A1276EA19C30AA571 /* Sources */ = {
+		556B531BF4B8051688C2B11192C912C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72EF4706FDDDA8DF23F0939327259888 /* Pods-BuscadorTwitter-dummy.m in Sources */,
+				0F0ABA382B3FF9115388D19D48D0FABB /* Pods-BuscadorTwitter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		965D297FFCDFD2A7C39655F00902464A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C291135B8F70B23323D7DC657F7D9F3F /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */,
+				F62A83691561DE3E68B19908026AA59A /* DGActivityIndicatorFiveDotsAnimation.m in Sources */,
+				7323FC099F871FD42A2C3344537855C5 /* DGActivityIndicatorNineDotsAnimation.m in Sources */,
+				BEE20EC16B2ED4E5B6B6EAC220ADC57C /* DGActivityIndicatorRotatingSquaresAnimation.m in Sources */,
+				9D250E2F4DA76AA89268865586948300 /* DGActivityIndicatorTriplePulseAnimation.m in Sources */,
+				329C29219413E084AED6CAD636194F0B /* DGActivityIndicatorTwoDotsAnimation.m in Sources */,
+				B1E4253A7D0975C8DD224D8C9DF32530 /* DGActivityIndicatorView-dummy.m in Sources */,
+				478CB84D76FE855ED154CCDD27E998C9 /* DGActivityIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		19994165451F4F0D6650B9F6DC6BC49A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DGActivityIndicatorView;
+			target = ECA401B017BAA4F7FD62F96E340466DB /* DGActivityIndicatorView */;
+			targetProxy = B1471265BBCBBC265AFE7DEE0517F8BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		07525B7A24DB9A4AAF462068E470A190 /* Release */ = {
+		25119CBE5D71D47BD9615971ECBB24AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B5759E10DE09D5607EE2B214DFCE9D0 /* Pods-BuscadorTwitter.release.xcconfig */;
+			baseConfigurationReference = E2B25A4F3F6C497BC92CBEC495FC1A3D /* DGActivityIndicatorView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DGActivityIndicatorView/DGActivityIndicatorView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		611BC1A8E227A7DCA3ABF44F218D57B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A778FE58E99AB11F73A4E3FE82F798A /* Pods-BuscadorTwitter.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -243,6 +416,22 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		7D9BA5C7F2D6BF9C9F5E45E7DBBC8FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65BDD10A879838C95C8B0276E6AD3309 /* Pods-BuscadorTwitter.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -283,16 +472,16 @@
 			};
 			name = Debug;
 		};
-		A858747B74F685E20EA0FDF969ECE62E /* Debug */ = {
+		AD75ACB466AB1AF91502FA5D32A355D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1C77C1B4D45B13E88CA47E6BD43A63F /* Pods-BuscadorTwitter.debug.xcconfig */;
+			baseConfigurationReference = E2B25A4F3F6C497BC92CBEC495FC1A3D /* DGActivityIndicatorView-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DGActivityIndicatorView/DGActivityIndicatorView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -345,11 +534,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AF57CEBDCD9100CC387F2C387D24575 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */ = {
+		CBD9F358EE325480CD7734BEE6E760A4 /* Build configuration list for PBXNativeTarget "DGActivityIndicatorView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A858747B74F685E20EA0FDF969ECE62E /* Debug */,
-				07525B7A24DB9A4AAF462068E470A190 /* Release */,
+				AD75ACB466AB1AF91502FA5D32A355D6 /* Debug */,
+				25119CBE5D71D47BD9615971ECBB24AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F72C6163F434BEBE090DBCF51C6DCD40 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D9BA5C7F2D6BF9C9F5E45E7DBBC8FC6 /* Debug */,
+				611BC1A8E227A7DCA3ABF44F218D57B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

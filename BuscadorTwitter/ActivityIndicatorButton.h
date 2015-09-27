@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DGActivityIndicatorView.h"
 
 @interface ActivityIndicatorButton : UIButton
 

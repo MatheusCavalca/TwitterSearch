@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DGActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BuscadorTwitter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F4CE187B9CE28BF4E24EDF9CEEFDD8B</key>
+		<key>6FEFCF51B3727E2ED816F9C22DE6C93D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECA401B017BAA4F7FD62F96E340466DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
