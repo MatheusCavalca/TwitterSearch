@@ -8,13 +8,21 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
+		</dict>
+		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F4CE187B9CE28BF4E24EDF9CEEFDD8B</key>
+		<key>CDE0B7668B6EC1B2BF166A65E070AF5E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA84013D02C55D3F1415032209C63A7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

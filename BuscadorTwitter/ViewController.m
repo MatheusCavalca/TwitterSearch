@@ -38,6 +38,7 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    self.txtQuery.delegate = self;
     
     [self.tvLastResearches registerNib:[UINib nibWithNibName:@"SearchesAndTrendsTableViewCell" bundle:nil] forCellReuseIdentifier:@"SearchAndTrendCellIdentifier"];
     [self.tvLastResearches setDelegate:self];
@@ -46,13 +47,20 @@
     [self.tvTrends setDelegate:self];
     [self.tvTrends setDelegate:self];
     
-    self.viewTvs.userInteractionEnabled = YES;
+    self.viewQuery.userInteractionEnabled = YES;
     UITapGestureRecognizer *vTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(tappedViewTvs:)];
     [vTapGesture setDelegate:self];
-    [self.viewTvs addGestureRecognizer:vTapGesture];
+    [self.viewQuery addGestureRecognizer:vTapGesture];
+    
+    self.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *mvTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(tappedMainView:)];
+    [mvTapGesture setDelegate:self];
+    [self.view addGestureRecognizer:mvTapGesture];
     
     arrayTweets = [[NSMutableArray alloc] init];
     arrayTrends = [[NSMutableArray alloc] init];
+    
+    self.txtQuery.placeholder = NSLocalizedString(@"SEARCH_IT", nil);
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -74,6 +82,10 @@
 
 #pragma mark - UITableView DataSource/Delegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return self.viewTvs.frame.size.height/8;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 40;
 }
@@ -81,10 +93,10 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     SearchesAndTrendsHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"SearchesAndTrendsHeaderView" owner:self options:nil] objectAtIndex:0];
     if(tableView == self.tvLastResearches){
-        headerView.labelTitle.text = @"Recent Searches";
+        headerView.labelTitle.text = NSLocalizedString(@"RECENT_SEARCHES",nil);
     }
     else{
-        headerView.labelTitle.text = @"Trending Now";
+        headerView.labelTitle.text = NSLocalizedString(@"TRENDING_NOW",nil);
     }
 
     return headerView;
@@ -109,6 +121,22 @@
     else{
         return arrayTrends.count;
     }
+}
+
+#pragma mark - Auxiliar Methods
+- (CGFloat)widthForText:(NSString *)text withFontSize:(CGFloat)txtSize
+{
+    CGSize maxSize = CGSizeMake(self.view.frame.size.width - 150, CGFLOAT_MAX);
+    if (!text) {
+        text = @"";
+    }
+    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                          [UIFont systemFontOfSize:txtSize], NSFontAttributeName,
+                                          [UIColor darkGrayColor], NSForegroundColorAttributeName,
+                                          nil];
+    CGRect textRect = [text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)  attributes:attributesDictionary context:nil];
+    NSInteger widthAsInt = (NSInteger) roundf(textRect.size.width) + 1;
+    return widthAsInt;
 }
 
 #pragma mark - Twitter API and parser
@@ -154,6 +182,10 @@
                          [self.btSearch hideActivityIndicator];
                          [self performSegueWithIdentifier:@"SegueResults" sender:self];
                      }];
+                 }
+                 else{
+                     [self.view setUserInteractionEnabled:YES];
+                     [self.btSearch hideActivityIndicator];
                  }
              }
              else {
@@ -291,6 +323,9 @@
     [self.txtQuery becomeFirstResponder];
 }
 
+- (void)tappedMainView:(id)sender{
+    [self.txtQuery resignFirstResponder];
+}
 #pragma mark - Navigation Methods
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -300,8 +335,34 @@
         destination.querySearched = self.txtQuery.text;
     }
 }
+#pragma mark - UITextField Delegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    NSString *strReplaced = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    NSDictionary *attributes = @{NSFontAttributeName: self.txtQuery.font};
+    CGSize newSize = [strReplaced sizeWithAttributes:attributes];
+    
+    //using this to give more space to text
+    float correctNewWidth = newSize.width + 15;
+    float correctMaxWidth = self.view.frame.size.width - self.btSearch.frame.size.width*2.5;
+    // assign new size
+    if(correctNewWidth > correctMaxWidth){
+        self.searchTextFieldWidthConstraint.constant = correctMaxWidth;
+    }
+    else{
+        self.searchTextFieldWidthConstraint.constant = correctNewWidth;
+    }
+    
+    return YES;
+}
 
-#pragma mark - keyboard notifications
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.btSearch presentActivityIndicator];
+    [self.view setUserInteractionEnabled:NO];
+    [self executeSearchTweetQuery];
+    [self.txtQuery resignFirstResponder];
+    return YES;
+}
+#pragma mark - Keyboard notifications
 
 - (void)keyboardWillShow:(NSNotification *)notification
 {

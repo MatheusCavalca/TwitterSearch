@@ -10,6 +10,7 @@
 		380020931BB43FBC001509C4 /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 380020921BB43FBC001509C4 /* TweetTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		380020981BB44032001509C4 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380020971BB44032001509C4 /* ResultsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3800209B1BB4499C001509C4 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800209A1BB4499C001509C4 /* Tweet.m */; settings = {ASSET_TAGS = (); }; };
+		38091B3F1BB85ADF0064131F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38091B411BB85ADF0064131F /* Localizable.strings */; };
 		382CEEB51BB31D8F00138424 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382CEEB41BB31D8F00138424 /* Twitter.framework */; };
 		385AA27D1BB31A490053260E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 385AA27C1BB31A490053260E /* main.m */; };
 		385AA2801BB31A490053260E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 385AA27F1BB31A490053260E /* AppDelegate.m */; };
@@ -54,6 +55,10 @@
 		380020971BB44032001509C4 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		380020991BB4499C001509C4 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		3800209A1BB4499C001509C4 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		38091B421BB85AEA0064131F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38091B431BB85B210064131F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		38091B441BB85B210064131F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		38091B451BB85B210064131F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		382CEEB41BB31D8F00138424 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		385AA2781BB31A490053260E /* BuscadorTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuscadorTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385AA27C1BB31A490053260E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -202,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				385AA27C1BB31A490053260E /* main.m */,
+				38091B411BB85ADF0064131F /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pt,
 			);
 			mainGroup = 385AA26F1BB31A490053260E;
 			productRefGroup = 385AA2791BB31A490053260E /* Products */;
@@ -360,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C440AA1BB5AF570044C85B /* SearchesAndTrendsHeaderView.xib in Resources */,
+				38091B3F1BB85ADF0064131F /* Localizable.strings in Resources */,
 				385AA28E1BB31A490053260E /* LaunchScreen.storyboard in Resources */,
 				385AA28B1BB31A490053260E /* Assets.xcassets in Resources */,
 				385AA2861BB31A490053260E /* Main.storyboard in Resources */,
@@ -479,10 +487,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		38091B411BB85ADF0064131F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38091B421BB85AEA0064131F /* en */,
+				38091B451BB85B210064131F /* pt */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		385AA2841BB31A490053260E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				385AA2851BB31A490053260E /* Base */,
+				38091B431BB85B210064131F /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -491,6 +509,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				385AA28D1BB31A490053260E /* Base */,
+				38091B441BB85B210064131F /* pt */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

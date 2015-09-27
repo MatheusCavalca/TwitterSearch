@@ -7,68 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		514DD829DC56511562EC5CCA1317D5D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2098A5CA765AC67E31F6E4E6EC2C3A /* Foundation.framework */; };
-		72EF4706FDDDA8DF23F0939327259888 /* Pods-BuscadorTwitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61783B4F1674960447351C06BBABE31D /* Pods-BuscadorTwitter-dummy.m */; };
+		02343597B2DA4D9DC3044F471767962D /* SWTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F966325ED1328B281F77CC34C4D775A9 /* SWTableViewCell.h */; };
+		04B5F22B8E40E0993BF243ADE6E0666F /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EE8DC3EF3470AB5D3E4B6B78803C5 /* SWCellScrollView.m */; };
+		0AC44EE7F6F204E829A14D69DBD8A182 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C804832C86C59284E717DBB35CDFE1 /* SWLongPressGestureRecognizer.m */; };
+		458D90856078F09D40F0E432EB197F90 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C4D6A3FD3FD647ED424E150747FEA4 /* SWUtilityButtonView.m */; };
+		4914DD250B35D4C747CC9D997374A4A7 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 831301B9CE30CF60350CFC73034A07EF /* NSMutableArray+SWUtilityButtons.h */; };
+		4E571FB70A4A3F416FBE60736715B363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035556EBF8F6AD7887161806B0F89508 /* Foundation.framework */; };
+		50DF4FA477ED67E4B91B39B082350CDB /* SWUtilityButtonTapGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9470A22E376584153020987EA5CF31AB /* SWUtilityButtonTapGestureRecognizer.h */; };
+		708DF68BB34B6191E08027022E00E858 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF9638E80052256979719EE1D300CCE /* SWUtilityButtonTapGestureRecognizer.m */; };
+		8440C0485667BBA1C37AC306020EBE87 /* SWTableViewCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC6A16797614B63BAA8C9F4CAE9AF6 /* SWTableViewCell-dummy.m */; };
+		86D7D69912A8CFDE9C3BB2095D10A64E /* Pods-BuscadorTwitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3260CC81D6079B1519BC5C3BAC3F81BA /* Pods-BuscadorTwitter-dummy.m */; };
+		94059260D174388FA55776F3B5ED4992 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 44B1D2DF9098AFFC922F54F1F0948CC4 /* SWCellScrollView.h */; };
+		9D99D6E31798EB6767BC94348A01ABE0 /* SWUtilityButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 640A5B869A6211B1B9630E3551EC2125 /* SWUtilityButtonView.h */; };
+		A97D3967FF124EACC5EF4B148DE1D43E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035556EBF8F6AD7887161806B0F89508 /* Foundation.framework */; };
+		A9C183B85BBBA6B8CECA4FFBC5B1D843 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC5B7967F2DD30BC721D6E61C85BA62 /* SWTableViewCell.m */; };
+		B8328810D6666C0837E84488D96DD50C /* SWLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6DC1D7C5B3D8AFBB4557B22A5E68B4 /* SWLongPressGestureRecognizer.h */; };
+		F36F4AA24579B8D13A013C9A4216361C /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F20E1294DF68273D66E175B18389DE /* NSMutableArray+SWUtilityButtons.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D8E4721C884FF0DC560BA5484638CBEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDE0B7668B6EC1B2BF166A65E070AF5E;
+			remoteInfo = SWTableViewCell;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		04E39D59307481684AF2B725D9355D69 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		04EE678B8AB04117735820A64A19461E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
-		2B2098A5CA765AC67E31F6E4E6EC2C3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		30B112759D5890206F818F8355F9653A /* Pods-BuscadorTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.debug.xcconfig"; sourceTree = "<group>"; };
-		61783B4F1674960447351C06BBABE31D /* Pods-BuscadorTwitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BuscadorTwitter-dummy.m"; sourceTree = "<group>"; };
+		01E9CF199A5D1CDFF5AD6352486AE438 /* SWTableViewCell-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SWTableViewCell-Private.xcconfig"; sourceTree = "<group>"; };
+		035556EBF8F6AD7887161806B0F89508 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		16C4D6A3FD3FD647ED424E150747FEA4 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = SWTableViewCell/PodFiles/SWUtilityButtonView.m; sourceTree = "<group>"; };
+		3260CC81D6079B1519BC5C3BAC3F81BA /* Pods-BuscadorTwitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BuscadorTwitter-dummy.m"; sourceTree = "<group>"; };
+		34F6DA953198EFF67990764FE98360CE /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		388ED4311B2DFCAD2BD65B72E827FB9B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		3F6DC1D7C5B3D8AFBB4557B22A5E68B4 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWLongPressGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		44B1D2DF9098AFFC922F54F1F0948CC4 /* SWCellScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWCellScrollView.h; path = SWTableViewCell/PodFiles/SWCellScrollView.h; sourceTree = "<group>"; };
+		5934A2761AD39B3FC91C2368CAE5346B /* SWTableViewCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWTableViewCell-prefix.pch"; sourceTree = "<group>"; };
+		640A5B869A6211B1B9630E3551EC2125 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonView.h; path = SWTableViewCell/PodFiles/SWUtilityButtonView.h; sourceTree = "<group>"; };
+		6FBC6A16797614B63BAA8C9F4CAE9AF6 /* SWTableViewCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWTableViewCell-dummy.m"; sourceTree = "<group>"; };
 		727DB0310F571C72FF187C207B6AA315 /* Pods-BuscadorTwitter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BuscadorTwitter-resources.sh"; sourceTree = "<group>"; };
-		808092380820A8C11BBAD0DCD7AB6C84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		768B3C593C358D81DF99B64EF3D850BA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		76F20E1294DF68273D66E175B18389DE /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SWUtilityButtons.m"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		81C804832C86C59284E717DBB35CDFE1 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWLongPressGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		831301B9CE30CF60350CFC73034A07EF /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SWUtilityButtons.h"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		8CA9DB2E9E0334C78EA36B184D976AE9 /* Pods-BuscadorTwitter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BuscadorTwitter-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B8A693A8D7E1E1E30DC3F2DF68568F25 /* libPods-BuscadorTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuscadorTwitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9470A22E376584153020987EA5CF31AB /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonTapGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		96B44F2FCBFCACB80E54E2E07D0996FB /* libSWTableViewCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSWTableViewCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0C2ADE50AEA7170E80E95F8BA79258D /* Pods-BuscadorTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		B9082168201299BFA1E5434FFBE45D31 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CBE0BE25EF6EBBD7BF32E3FC113E80E0 /* Pods-BuscadorTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.release.xcconfig"; sourceTree = "<group>"; };
-		E1F7CED7EFFC782BA5BCF9C65FB8FE7F /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		C3D85ECEB77E5F74E4ADCFEB434D850A /* libPods-BuscadorTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuscadorTwitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBF9638E80052256979719EE1D300CCE /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonTapGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		EFC5B7967F2DD30BC721D6E61C85BA62 /* SWTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWTableViewCell.m; path = SWTableViewCell/PodFiles/SWTableViewCell.m; sourceTree = "<group>"; };
 		F6667A35108A2D8D71693A9DB8343103 /* Pods-BuscadorTwitter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BuscadorTwitter-acknowledgements.plist"; sourceTree = "<group>"; };
+		F966325ED1328B281F77CC34C4D775A9 /* SWTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWTableViewCell.h; path = SWTableViewCell/PodFiles/SWTableViewCell.h; sourceTree = "<group>"; };
+		FC3EE8DC3EF3470AB5D3E4B6B78803C5 /* SWCellScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWCellScrollView.m; path = SWTableViewCell/PodFiles/SWCellScrollView.m; sourceTree = "<group>"; };
+		FE08F1F7AB50328F9437E23A85E79263 /* Pods-BuscadorTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BuscadorTwitter.release.xcconfig"; sourceTree = "<group>"; };
+		FFCDCB4122D039FCDBE559BC20DD0F9C /* SWTableViewCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWTableViewCell.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20F9D037BE0D96B4CDC68BEA2FF022C5 /* Frameworks */ = {
+		3074EEAB6AB7E3D27DA4B95984335394 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514DD829DC56511562EC5CCA1317D5D4 /* Foundation.framework in Frameworks */,
+				4E571FB70A4A3F416FBE60736715B363 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A77F9555C94FEEEA8612CA84642EE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A97D3967FF124EACC5EF4B148DE1D43E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20D1E612B0914806EF3C8B0BF8A12A27 /* Pods */ = {
+		3B14531E6C3E5FF6F08372958B367D66 /* TwitterCore */ = {
 			isa = PBXGroup;
 			children = (
-				41919487AEDE29CC53FC94B9EEE66D97 /* Fabric */,
-				66E6A3B97329AA8D102CF49A6EAE8C42 /* TwitterCore */,
-				C153494D9C466AF7986AA36B04FCE051 /* TwitterKit */,
+				E6C3062B2EF1689596AD1D8538873966 /* Frameworks */,
 			);
-			name = Pods;
+			path = TwitterCore;
 			sourceTree = "<group>";
 		};
-		281264A27C4C4060141789A475FDDD3C /* Frameworks */ = {
+		4FC305BB8F341177BC846492371F5CDE /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				04E39D59307481684AF2B725D9355D69 /* TwitterCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		41919487AEDE29CC53FC94B9EEE66D97 /* Fabric */ = {
-			isa = PBXGroup;
-			children = (
-				4598C4A01720DE02879D8FED69513037 /* Base */,
-			);
-			path = Fabric;
-			sourceTree = "<group>";
-		};
-		4598C4A01720DE02879D8FED69513037 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				D75CEE4E7B007E725C080B26FFC3CECD /* Frameworks */,
+				8B7934B0346BDFD5F716675B040363AB /* Frameworks */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -76,7 +107,7 @@
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2B2098A5CA765AC67E31F6E4E6EC2C3A /* Foundation.framework */,
+				035556EBF8F6AD7887161806B0F89508 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -89,12 +120,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		66E6A3B97329AA8D102CF49A6EAE8C42 /* TwitterCore */ = {
+		7D51A72D275A8C37D7BCAB645ED9836D /* SWTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				281264A27C4C4060141789A475FDDD3C /* Frameworks */,
+				831301B9CE30CF60350CFC73034A07EF /* NSMutableArray+SWUtilityButtons.h */,
+				76F20E1294DF68273D66E175B18389DE /* NSMutableArray+SWUtilityButtons.m */,
+				44B1D2DF9098AFFC922F54F1F0948CC4 /* SWCellScrollView.h */,
+				FC3EE8DC3EF3470AB5D3E4B6B78803C5 /* SWCellScrollView.m */,
+				3F6DC1D7C5B3D8AFBB4557B22A5E68B4 /* SWLongPressGestureRecognizer.h */,
+				81C804832C86C59284E717DBB35CDFE1 /* SWLongPressGestureRecognizer.m */,
+				F966325ED1328B281F77CC34C4D775A9 /* SWTableViewCell.h */,
+				EFC5B7967F2DD30BC721D6E61C85BA62 /* SWTableViewCell.m */,
+				9470A22E376584153020987EA5CF31AB /* SWUtilityButtonTapGestureRecognizer.h */,
+				EBF9638E80052256979719EE1D300CCE /* SWUtilityButtonTapGestureRecognizer.m */,
+				640A5B869A6211B1B9630E3551EC2125 /* SWUtilityButtonView.h */,
+				16C4D6A3FD3FD647ED424E150747FEA4 /* SWUtilityButtonView.m */,
+				B47BE458F4F2927839210374913F23E8 /* Support Files */,
 			);
-			path = TwitterCore;
+			path = SWTableViewCell;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -102,10 +145,35 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				20D1E612B0914806EF3C8B0BF8A12A27 /* Pods */,
+				C6639F9812BC8512E674731F19D85DA3 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				5B2A9518EEA4893CB1D880104211679F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		82C8E55ED8F7DD7C7661102387D8C8F9 /* TwitterKit */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AEAC5A724CA9651E1610E367BD8B7 /* Frameworks */,
+				D19B7CAAE70FFDF026F8D29AB9983B18 /* Resources */,
+			);
+			path = TwitterKit;
+			sourceTree = "<group>";
+		};
+		8B7934B0346BDFD5F716675B040363AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				388ED4311B2DFCAD2BD65B72E827FB9B /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D1AEAC5A724CA9651E1610E367BD8B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34F6DA953198EFF67990764FE98360CE /* TwitterKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		93F2E858C183A68E7EA45726EE649660 /* Pods-BuscadorTwitter */ = {
@@ -113,21 +181,33 @@
 			children = (
 				8CA9DB2E9E0334C78EA36B184D976AE9 /* Pods-BuscadorTwitter-acknowledgements.markdown */,
 				F6667A35108A2D8D71693A9DB8343103 /* Pods-BuscadorTwitter-acknowledgements.plist */,
-				61783B4F1674960447351C06BBABE31D /* Pods-BuscadorTwitter-dummy.m */,
+				3260CC81D6079B1519BC5C3BAC3F81BA /* Pods-BuscadorTwitter-dummy.m */,
 				727DB0310F571C72FF187C207B6AA315 /* Pods-BuscadorTwitter-resources.sh */,
-				30B112759D5890206F818F8355F9653A /* Pods-BuscadorTwitter.debug.xcconfig */,
-				CBE0BE25EF6EBBD7BF32E3FC113E80E0 /* Pods-BuscadorTwitter.release.xcconfig */,
+				B0C2ADE50AEA7170E80E95F8BA79258D /* Pods-BuscadorTwitter.debug.xcconfig */,
+				FE08F1F7AB50328F9437E23A85E79263 /* Pods-BuscadorTwitter.release.xcconfig */,
 			);
 			name = "Pods-BuscadorTwitter";
 			path = "Target Support Files/Pods-BuscadorTwitter";
 			sourceTree = "<group>";
 		};
-		9958567BEA943CBA5CD7652B4EDFD6FF /* Frameworks */ = {
+		B0647697C0ACCC765DB562B5303FD13A /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				E1F7CED7EFFC782BA5BCF9C65FB8FE7F /* TwitterKit.framework */,
+				4FC305BB8F341177BC846492371F5CDE /* Base */,
 			);
-			name = Frameworks;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		B47BE458F4F2927839210374913F23E8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFCDCB4122D039FCDBE559BC20DD0F9C /* SWTableViewCell.xcconfig */,
+				01E9CF199A5D1CDFF5AD6352486AE438 /* SWTableViewCell-Private.xcconfig */,
+				6FBC6A16797614B63BAA8C9F4CAE9AF6 /* SWTableViewCell-dummy.m */,
+				5934A2761AD39B3FC91C2368CAE5346B /* SWTableViewCell-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWTableViewCell";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -138,56 +218,93 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C153494D9C466AF7986AA36B04FCE051 /* TwitterKit */ = {
+		C6639F9812BC8512E674731F19D85DA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9958567BEA943CBA5CD7652B4EDFD6FF /* Frameworks */,
-				ECE1A6433714DBA9584042CC97D55D38 /* Resources */,
+				B0647697C0ACCC765DB562B5303FD13A /* Fabric */,
+				7D51A72D275A8C37D7BCAB645ED9836D /* SWTableViewCell */,
+				3B14531E6C3E5FF6F08372958B367D66 /* TwitterCore */,
+				82C8E55ED8F7DD7C7661102387D8C8F9 /* TwitterKit */,
 			);
-			path = TwitterKit;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8A693A8D7E1E1E30DC3F2DF68568F25 /* libPods-BuscadorTwitter.a */,
+				C3D85ECEB77E5F74E4ADCFEB434D850A /* libPods-BuscadorTwitter.a */,
+				96B44F2FCBFCACB80E54E2E07D0996FB /* libSWTableViewCell.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D75CEE4E7B007E725C080B26FFC3CECD /* Frameworks */ = {
+		D19B7CAAE70FFDF026F8D29AB9983B18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				808092380820A8C11BBAD0DCD7AB6C84 /* Fabric.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ECE1A6433714DBA9584042CC97D55D38 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				04EE678B8AB04117735820A64A19461E /* TwitterKitResources.bundle */,
+				B9082168201299BFA1E5434FFBE45D31 /* TwitterKitResources.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		E6C3062B2EF1689596AD1D8538873966 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				768B3C593C358D81DF99B64EF3D850BA /* TwitterCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		FBD05ED36BC00EC62C78A7B198EB64F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4914DD250B35D4C747CC9D997374A4A7 /* NSMutableArray+SWUtilityButtons.h in Headers */,
+				94059260D174388FA55776F3B5ED4992 /* SWCellScrollView.h in Headers */,
+				B8328810D6666C0837E84488D96DD50C /* SWLongPressGestureRecognizer.h in Headers */,
+				02343597B2DA4D9DC3044F471767962D /* SWTableViewCell.h in Headers */,
+				50DF4FA477ED67E4B91B39B082350CDB /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
+				9D99D6E31798EB6767BC94348A01ABE0 /* SWUtilityButtonView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		1F4CE187B9CE28BF4E24EDF9CEEFDD8B /* Pods-BuscadorTwitter */ = {
+		CDE0B7668B6EC1B2BF166A65E070AF5E /* SWTableViewCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AF57CEBDCD9100CC387F2C387D24575 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */;
+			buildConfigurationList = A9274B6F43A643F58A58515EBD76E6C1 /* Build configuration list for PBXNativeTarget "SWTableViewCell" */;
 			buildPhases = (
-				D43EC9B46AB9146A1276EA19C30AA571 /* Sources */,
-				20F9D037BE0D96B4CDC68BEA2FF022C5 /* Frameworks */,
+				773CAFB38E297B2514200DAAE08669A1 /* Sources */,
+				3074EEAB6AB7E3D27DA4B95984335394 /* Frameworks */,
+				FBD05ED36BC00EC62C78A7B198EB64F7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = SWTableViewCell;
+			productName = SWTableViewCell;
+			productReference = 96B44F2FCBFCACB80E54E2E07D0996FB /* libSWTableViewCell.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FA84013D02C55D3F1415032209C63A7C /* Pods-BuscadorTwitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2BF2E030F106A666886F42E3EF209A3 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */;
+			buildPhases = (
+				E8A66853BC7E487D1D9D94577FD1A3BC /* Sources */,
+				F5A77F9555C94FEEEA8612CA84642EE9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0CD04D9591A49A663FF669A33110988 /* PBXTargetDependency */,
+			);
 			name = "Pods-BuscadorTwitter";
 			productName = "Pods-BuscadorTwitter";
-			productReference = B8A693A8D7E1E1E30DC3F2DF68568F25 /* libPods-BuscadorTwitter.a */;
+			productReference = C3D85ECEB77E5F74E4ADCFEB434D850A /* libPods-BuscadorTwitter.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -211,24 +328,64 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1F4CE187B9CE28BF4E24EDF9CEEFDD8B /* Pods-BuscadorTwitter */,
+				FA84013D02C55D3F1415032209C63A7C /* Pods-BuscadorTwitter */,
+				CDE0B7668B6EC1B2BF166A65E070AF5E /* SWTableViewCell */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D43EC9B46AB9146A1276EA19C30AA571 /* Sources */ = {
+		773CAFB38E297B2514200DAAE08669A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72EF4706FDDDA8DF23F0939327259888 /* Pods-BuscadorTwitter-dummy.m in Sources */,
+				F36F4AA24579B8D13A013C9A4216361C /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				04B5F22B8E40E0993BF243ADE6E0666F /* SWCellScrollView.m in Sources */,
+				0AC44EE7F6F204E829A14D69DBD8A182 /* SWLongPressGestureRecognizer.m in Sources */,
+				8440C0485667BBA1C37AC306020EBE87 /* SWTableViewCell-dummy.m in Sources */,
+				A9C183B85BBBA6B8CECA4FFBC5B1D843 /* SWTableViewCell.m in Sources */,
+				708DF68BB34B6191E08027022E00E858 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
+				458D90856078F09D40F0E432EB197F90 /* SWUtilityButtonView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A66853BC7E487D1D9D94577FD1A3BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D7D69912A8CFDE9C3BB2095D10A64E /* Pods-BuscadorTwitter-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E0CD04D9591A49A663FF669A33110988 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWTableViewCell;
+			target = CDE0B7668B6EC1B2BF166A65E070AF5E /* SWTableViewCell */;
+			targetProxy = D8E4721C884FF0DC560BA5484638CBEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+		6F60179F5E6A7ECE363D2BE635CEB2B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01E9CF199A5D1CDFF5AD6352486AE438 /* SWTableViewCell-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWTableViewCell/SWTableViewCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,14 +417,62 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+		B4879C91FA6E12460814CBB85B575316 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE08F1F7AB50328F9437E23A85E79263 /* Pods-BuscadorTwitter.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CAFBD2F5020B8CD2645814254A11AC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0C2ADE50AEA7170E80E95F8BA79258D /* Pods-BuscadorTwitter.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D014ECDF2444DDB184A757F20B965CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01E9CF199A5D1CDFF5AD6352486AE438 /* SWTableViewCell-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWTableViewCell/SWTableViewCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,42 +499,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8ACDDEE6704730FD79F68827CE896ADB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30B112759D5890206F818F8355F9653A /* Pods-BuscadorTwitter.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BA77A238F06B53F7CB1E91465A171ED3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBE0BE25EF6EBBD7BF32E3FC113E80E0 /* Pods-BuscadorTwitter.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -339,17 +512,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
-				74857149DC1E0D599B8A01A78349A926 /* Release */,
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AF57CEBDCD9100CC387F2C387D24575 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */ = {
+		A2BF2E030F106A666886F42E3EF209A3 /* Build configuration list for PBXNativeTarget "Pods-BuscadorTwitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ACDDEE6704730FD79F68827CE896ADB /* Debug */,
-				BA77A238F06B53F7CB1E91465A171ED3 /* Release */,
+				CAFBD2F5020B8CD2645814254A11AC01 /* Debug */,
+				B4879C91FA6E12460814CBB85B575316 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9274B6F43A643F58A58515EBD76E6C1 /* Build configuration list for PBXNativeTarget "SWTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F60179F5E6A7ECE363D2BE635CEB2B2 /* Debug */,
+				D014ECDF2444DDB184A757F20B965CA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

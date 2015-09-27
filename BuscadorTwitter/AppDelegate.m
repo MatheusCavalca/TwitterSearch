@@ -22,6 +22,8 @@
     NSString *myConsumerKey = @"zFLX0IXYgrpMgSNN7ese52eYt"; //set this to your consumer key from twitter
     NSString *myConsumerSecret = @"4nBnWdLYadHMZ35t0Ekoxeuj0Ut1weM3hyxnASJPxV4B3v4r1C"; //set this to your consumer secret from
     [TwitterKit startWithConsumerKey:myConsumerKey consumerSecret:myConsumerSecret];
+    
+    [application setStatusBarHidden:YES];
     return YES;
 }
 

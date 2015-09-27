@@ -16,7 +16,7 @@
 #import "Tweet.h"
 #import "ActivityIndicatorButton.h"
 
-@interface ViewController : UIViewController<UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *viewTvs;
 @property (strong, nonatomic) IBOutlet UITableView *tvLastResearches;
@@ -24,7 +24,9 @@
 @property (strong, nonatomic) IBOutlet ActivityIndicatorButton *btSearch;
 @property (strong, nonatomic) IBOutlet UIView *viewQuery;
 @property (strong, nonatomic) IBOutlet UITextField *txtQuery;
+
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *SearchViewConstraintCenterY;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *twitterLogoBottomConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *searchTextFieldWidthConstraint;
 
 @end

@@ -2,16 +2,19 @@ PODS:
   - Fabric (1.5.1):
     - Fabric/Base (= 1.5.1)
   - Fabric/Base (1.5.1)
+  - SWTableViewCell (0.3.7)
   - TwitterCore (1.11.1)
   - TwitterKit (1.11.1)
 
 DEPENDENCIES:
   - Fabric
+  - SWTableViewCell (~> 0.3.7)
   - TwitterCore
   - TwitterKit
 
 SPEC CHECKSUMS:
   Fabric: 03c3b3fe77e11a2bc31421b989a9c7adaa4779a5
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   TwitterCore: 9ec69df7571207044b1a2f57ae2c87fe73348ac5
   TwitterKit: bce9f0eac1e186caab5aa570d64d82c5cb9089be
 

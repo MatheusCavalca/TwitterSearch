@@ -16,9 +16,9 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    CGFloat halfButtonHeight = self.bounds.size.height/2;
+    CGFloat buttonHeight = self.bounds.size.height;
     CGFloat buttonWidth = self.bounds.size.width;
-    activityIndicator.center = CGPointMake(buttonWidth - halfButtonHeight , halfButtonHeight);
+    activityIndicator.center = CGPointMake(buttonWidth , buttonHeight);
     [self addSubview:activityIndicator];
 }
 
