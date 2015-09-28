@@ -90,9 +90,9 @@
         ((TweetWithMediaUITableViewCell*)cell).imgMediaPicture.image = currentTweet.mediaPicture;
         float imgWidth = img.size.width;
         float imgHeight = img.size.height;
-        float coeficient = imgWidth/imgHeight;
-        float valueToAdd = coeficient - ((TweetWithMediaUITableViewCell*)cell).imgMediaPicture.frame.size.height;
-        ((TweetWithMediaUITableViewCell*)cell).constraintImgMediaRatio.constant = valueToAdd;
+        float coeficient = imgHeight/imgWidth;
+        float valueToAdd = coeficient*((TweetWithMediaUITableViewCell*)cell).imgMediaPicture.frame.size.width - ((TweetWithMediaUITableViewCell*)cell).imgMediaPicture.frame.size.height;
+        ((TweetWithMediaUITableViewCell*)cell).constraintImgMediaRatio.constant = -valueToAdd;
     }
     else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellIdentifier"];
