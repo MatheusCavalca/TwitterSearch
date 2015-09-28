@@ -12,5 +12,6 @@
 @interface TweetWithMediaUITableViewCell : TweetTableViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgMediaPicture;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *constraintImgMediaRatio;
 
 @end

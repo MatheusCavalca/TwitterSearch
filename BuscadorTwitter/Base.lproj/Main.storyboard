@@ -711,7 +711,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsq-sn-lbD">
-                                                            <rect key="frame" x="133" y="20" width="36" height="25"/>
+                                                            <rect key="frame" x="133" y="20.5" width="36" height="25"/>
                                                             <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="gf2-9T-dsS"/>
@@ -724,7 +724,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03p-T1-s9D">
-                                                            <rect key="frame" x="133" y="50" width="427" height="9"/>
+                                                            <rect key="frame" x="133" y="50.5" width="427" height="8.5"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -734,7 +734,7 @@
                                                             </variation>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-Dc-1QJ">
-                                                            <rect key="frame" x="40" y="20" width="77" height="77"/>
+                                                            <rect key="frame" x="40" y="20.5" width="77" height="77"/>
                                                             <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="77" id="8vg-BY-kTn"/>
@@ -742,7 +742,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="400" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="Uuc-oM-xta">
-                                                            <rect key="frame" x="135" y="67" width="425" height="212.5"/>
+                                                            <rect key="frame" x="135" y="66.5" width="425" height="212.5"/>
                                                             <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Uuc-oM-xta" secondAttribute="height" multiplier="2:1" id="Hje-OV-wdG"/>
@@ -784,6 +784,7 @@
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
+                                                            <exclude reference="UvI-zG-A8I"/>
                                                             <exclude reference="rBk-aE-iBw"/>
                                                             <exclude reference="4y0-SY-KUh"/>
                                                             <exclude reference="zD0-ne-AkT"/>
@@ -809,6 +810,7 @@
                                             <outlet property="buttonRemove" destination="dTA-b4-Jip" id="v24-UU-NO1"/>
                                             <outlet property="buttonShare" destination="Whe-N4-1A4" id="3kW-7f-88j"/>
                                             <outlet property="buttonTop" destination="fe0-Ut-bUt" id="B4I-JN-Z6u"/>
+                                            <outlet property="constraintImgMediaRatio" destination="Hje-OV-wdG" id="RXc-Cz-DPQ"/>
                                             <outlet property="imgMediaPicture" destination="Uuc-oM-xta" id="GGa-Vy-Lld"/>
                                             <outlet property="imgProfilePicture" destination="XFi-Dc-1QJ" id="YOy-RU-W6i"/>
                                             <outlet property="lblMessage" destination="03p-T1-s9D" id="r6s-cz-Iuq"/>

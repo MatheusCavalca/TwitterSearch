@@ -86,7 +86,13 @@
     TweetTableViewCell *cell;
     if(currentTweet.mediaPicture){
         cell = [tableView dequeueReusableCellWithIdentifier:@"TweetWithMediaCellIdentifier"];
+        UIImage *img = currentTweet.mediaPicture;
         ((TweetWithMediaUITableViewCell*)cell).imgMediaPicture.image = currentTweet.mediaPicture;
+        float imgWidth = img.size.width;
+        float imgHeight = img.size.height;
+        float coeficient = imgWidth/imgHeight;
+        float valueToAdd = coeficient - ((TweetWithMediaUITableViewCell*)cell).imgMediaPicture.frame.size.height;
+        ((TweetWithMediaUITableViewCell*)cell).constraintImgMediaRatio.constant = valueToAdd;
     }
     else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellIdentifier"];
