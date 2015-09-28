@@ -20,6 +20,7 @@
     
     self.tvMain.rowHeight = UITableViewAutomaticDimension;
     self.tvMain.estimatedRowHeight = 140.0f;
+    self.tvMain.tableFooterView = [[UIView alloc] init];
 }
 
 #pragma marl - Auxiliar methods

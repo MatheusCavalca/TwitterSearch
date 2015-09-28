@@ -22,7 +22,7 @@
     activityIndicatorView.frame = CGRectMake(20.0f, 20.0f, self.frame.size.width-40, self.frame.size.height-40);
     [self addSubview:activityIndicatorView];
 
-    [self setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [self setImage:nil forState:UIControlStateNormal];
     [activityIndicatorView startAnimating];
 }
 
